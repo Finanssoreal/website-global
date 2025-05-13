@@ -1,33 +1,32 @@
 <script>
-import {goto} from "$app/navigation"
-import {page} from "$app/stores"
-import {get} from "svelte/store"
+    import { goto } from "$app/navigation"
+    import { page } from "$app/stores"
+    import { get } from "svelte/store"
 
+    let isOpen = false
 
-let isOpen = false
+    const links = {
+        Inicio: "/",
+        Catalogo: "/catalog",
+        Contacto: "/contact",
+    }
 
-const links ={
-    Inicio:"/",
-    Catalogo:"/catalog",
-    Contacto:"/contact"
-}
+    function handleLinkClick(path) {
+        isOpen = false
+        goto(path)
+    }
 
-function handleLinkClick(path){
-    isOpen = false
-    goto(path)
-}
-
- $: currentPath = $page.url.pathname;
+    $: currentPath = $page.url.pathname
 </script>
 
-<div class="navbar bg-primary w-full z-50 shadow-lg h-20 md:w-100 md:h-40">
+<div class="navbar bg-primary w-full z-50 shadow-lg h-20 md:w-full md:h-20">
     <div class="navbar-start">
         <!-- Botón móvil -->
         <div class="dropdown">
             <button
                 aria-label="boton amburguesa"
                 on:click={() => (isOpen = !isOpen)}
-                class="btn btn-ghost bg-info border-info lg:block lg:mt-5 lg:ml-2 xl:hidden">
+                class="btn btn-ghost bg-info border-info lg:block lg:mt-5 lg:ml-2 xl:hidden h-10 w-full">
                 <i class="fa-solid fa-bars text-3xl text-base-100"></i>
             </button>
 
@@ -59,30 +58,28 @@ function handleLinkClick(path){
     </div>
 
     <!-- Logo móvil -->
-    <div class="navbar-end xl:hidden flex lg:mr-4 mr-4 animate-none mt-4">
+    <div class="navbar-end xl:hidden flex lg:mr-4 mr-4 animate-none">
         <a href="/">
             <img
                 src="/images/Inicio/logoG.png"
                 alt="logo"
-                width="100"
-                height="100" />
+                width="90"
+                height="90" />
         </a>
     </div>
-
     <!-- Menú grande -->
     <div class="navbar-end hidden xl:flex">
-  <ul class="menu menu-horizontal px-1">
-    {#each Object.entries(links) as [label, path]}
-      <li class="text-xl">
-        <a
-          href={path}
-          class:text-red-600={currentPath === path}
-          class:text-black={currentPath !== path}
-        >
-          {label}
-        </a>
-      </li>
-    {/each}
-  </ul>
-</div>
+        <ul class="menu menu-horizontal px-1">
+            {#each Object.entries(links) as [label, path]}
+                <li class="text-xl">
+                    <a
+                        href={path}
+                        class:text-red-600={currentPath === path}
+                        class:text-black={currentPath !== path}>
+                        {label}
+                    </a>
+                </li>
+            {/each}
+        </ul>
+    </div>
 </div>
