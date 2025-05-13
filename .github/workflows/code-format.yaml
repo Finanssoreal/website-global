@@ -1,0 +1,20 @@
+name: code-format-checks
+on:
+    pull_request:
+        branches:
+            - main
+        types:
+            - opened
+            - synchronize
+jobs:
+    formatting-checks:
+        runs-on: ubuntu-latest
+        container:
+            image: finanssoreal/node-prettier:latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Check JS file formatting
+              # prettier devs are fucking autistic: https://github.com/prettier/prettier/issues/15141#issuecomment-2479937040
+              run: ln -sfn /usr/local/lib/node_modules ./node_modules && prettier --check .
