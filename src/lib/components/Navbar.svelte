@@ -26,7 +26,7 @@
             <button
                 aria-label="boton amburguesa"
                 on:click={() => (isOpen = !isOpen)}
-                class="btn btn-ghost bg-info border-info lg:block lg:mt-5 lg:ml-2 xl:hidden h-10 w-full">
+                class="btn btn-accent/10 lg:block lg:mt-5 lg:ml-2 xl:hidden h-10 w-full">
                 <i class="fa-solid fa-bars text-3xl text-base-100"></i>
             </button>
 
