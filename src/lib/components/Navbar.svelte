@@ -50,10 +50,10 @@
         <!-- Logo grande -->
         <a class="hidden ml-4 lg:hidden xl:block" href="/">
             <img
-                src="/images/Inicio/logoG.png"
+                src="/images/Navbar/LOGOGLOBAL.png"
                 alt="logo"
-                width="90"
-                height="90" />
+                width="80"
+                height="80" />
         </a>
     </div>
 
@@ -61,10 +61,10 @@
     <div class="navbar-end xl:hidden flex lg:mr-4 mr-4 animate-none">
         <a href="/">
             <img
-                src="/images/Inicio/logoG.png"
+                src="/images/Navbar/LOGOGLOBALPROPUESTAS-18.png"
                 alt="logo"
-                width="90"
-                height="90" />
+                width="110"
+                height="110" />
         </a>
     </div>
     <!-- Menú grande -->
