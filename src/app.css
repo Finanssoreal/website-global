@@ -21,13 +21,13 @@ body {
 
     --color-primary: #e4e4e4;
     --color-primary-content: #f1f5f9;
-    --color-neutral: #06b6d4;
-    --color-info: #0a1228;
+    --color-neutral: #023a5d;
+    --color-info: #010e00;
     --color-info-content: #0a1228;
 
     --color-secondary: #86b916;
     --color-secondary-content: #0284c7;
-    --color-success: #0e7490;
+    --color-success: #fe0606;
     --color-accent: #ffffff;
     --color-accent-content: #0284c7;
 }
