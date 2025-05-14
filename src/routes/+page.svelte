@@ -1,4 +1,3 @@
-<!-- section one -->
 <section>
     <div class="w-full h-70 sm:h-100 md:h-118 bg-primary">
         <div class="flex items-center justify-center w-full">
@@ -16,5 +15,31 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="bg-blue-700 w-full h-140 bg-cover bg-center"
+        style="background-image: url('images/Recursos/banner-image.png');"
+    >
+
+    <!--Contenedor del texto del banner-->
+    <div class="flex flex-col ">
+
+        <div class="flex flex-row w-full">
+            <p class="text-white font-bold text-4xl">DURABILIDAD</p>
+        </div>
+
+        <div class="flex flex-row w-full">
+            <p class="text-white font-bold text-4xl">POTENCIA Y COMODIDAD</p>
+        </div>
+
+        <div class="flex flex-row w-full">
+            <a href="/catalog" class="text-white text-2xl">¡Adquiérela ahora! </a>
+        </div>
+
+    </div>
+
     </div>
 </section>
