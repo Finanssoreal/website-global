@@ -7,7 +7,7 @@
 
     const links = {
         Inicio: "/",
-        Catalogo: "/catalog",
+        Catálogo: "/catalog",
         Contacto: "/contact",
     }
 
@@ -26,8 +26,8 @@
             <button
                 aria-label="boton amburguesa"
                 on:click={() => (isOpen = !isOpen)}
-                class="btn btn-accent/10 lg:block lg:mt-5 lg:ml-2 xl:hidden h-10 w-full">
-                <i class="fa-solid fa-bars text-3xl text-base-100"></i>
+                class="btn btn-ghost lg:block lg:mt-5 lg:ml-2 xl:hidden h-10 w-full">
+                <i class="fa-solid fa-bars text-3xl text-info"></i>
             </button>
 
             {#if isOpen}
@@ -61,10 +61,10 @@
     <div class="navbar-end xl:hidden flex lg:mr-4 mr-4 animate-none">
         <a href="/">
             <img
-                src="/images/Navbar/LOGOGLOBALPROPUESTAS-18.png"
+                src="/images/Navbar/LOGOGLOBAL.png"
                 alt="logo"
-                width="110"
-                height="110" />
+                width="60"
+                height="60" />
         </a>
     </div>
     <!-- Menú grande -->
