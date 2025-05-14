@@ -11,7 +11,7 @@
                     GLOBAL
                 </h1>
                 <div
-                    class="h-100 w-180 relative items-center justify-center flex">
+                    class="h-100 w-80 md:w-180 relative items-center justify-center flex">
                     <img
                         src="/images/Inicio/moto.png"
                         alt="Foto izquierda"
