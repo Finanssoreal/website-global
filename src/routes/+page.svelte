@@ -68,13 +68,16 @@
 
 
 <section>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 p-4">
+    <div class="flex flex-row w-full justify-center mt-5 mb-5">
+        <p class="text-black font-bold text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">Encuentra las mejores motocicletas del mercado</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 pt-4 mb-8 pl-70 pr-70  place-items-center">
 
         <!-- Card 1 -->
-        <div class="flex flex-col bg-white shadow-md rounded-lg p-3">
+        <div class="flex flex-col bg-white shadow-xl rounded-lg p-3 w-60">
           <p class="text-lg font-bold">HONDA</p>
 
-          <div class="flex flex-row justify-center mt-2">
+          <div class="flex flex-row justify-center ">
             <div class="bg-amber-400 h-40 w-50"><img src="images/Recursos/red-moto.png" alt="Motocicleta Honda"></div>
           </div>
 
@@ -88,21 +91,61 @@
 
         </div>
 
-
-
         <!-- Card 2 -->
-        <div class="bg-white shadow-md rounded-lg p-6">
-          <h2 class="text-lg font-semibold">Card 2</h2>
-          <p class="text-gray-600">Contenido de la tarjeta 2.</p>
-        </div>
+        <div class="flex flex-col bg-white shadow-xl rounded-lg p-3 w-60">
+            <p class="text-lg font-bold">HONDA</p>
 
-        <!-- Card 3 -->
-        <div class="bg-white shadow-md rounded-lg p-6">
-          <h2 class="text-lg font-semibold">Card 3</h2>
-          <p class="text-gray-600">Contenido de la tarjeta 3.</p>
-        </div>
+            <div class="flex flex-row justify-center ">
+              <div class="bg-amber-400 h-40 w-50"><img src="images/Recursos/red-moto.png" alt="Motocicleta Honda"></div>
+            </div>
 
-        <!-- Agrega más tarjetas si lo deseas -->
+            <div class="flex flex-row justify-end mt-3">
+            <p class="text-gray-600">XR 190 L</p>
+           </div>
+
+           <div class="flex flex-row justify-end mt-3">
+              <p class="text-gray-600">Q 13,000.00</p>
+             </div>
+
+          </div>
+
+
+          <!-- Card 3 -->
+        <div class="flex flex-col bg-white shadow-xl rounded-lg p-3 w-60">
+            <p class="text-lg font-bold">HONDA</p>
+
+            <div class="flex flex-row justify-center ">
+              <div class="bg-amber-400 h-40 w-50"><img src="images/Recursos/red-moto.png" alt="Motocicleta Honda"></div>
+            </div>
+
+            <div class="flex flex-row justify-end mt-3">
+            <p class="text-gray-600">XR 190 L</p>
+           </div>
+
+           <div class="flex flex-row justify-end mt-3">
+              <p class="text-gray-600">Q 13,000.00</p>
+             </div>
+          </div>
+
+
+           <!-- Card 4 -->
+        <div class="flex flex-col bg-white shadow-xl rounded-lg p-3 w-60">
+            <p class="text-lg font-bold">HONDA</p>
+
+            <div class="flex flex-row justify-center ">
+              <div class="bg-amber-400 h-40 w-50"><img src="images/Recursos/red-moto.png" alt="Motocicleta Honda"></div>
+            </div>
+
+            <div class="flex flex-row justify-end mt-3">
+            <p class="text-gray-600">XR 190 L</p>
+           </div>
+
+           <div class="flex flex-row justify-end mt-3">
+              <p class="text-gray-600">Q 13,000.00</p>
+             </div>
+          </div>
+
+
       </div>
 
 </section>
