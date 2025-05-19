@@ -128,7 +128,7 @@
     </div>
 
     <div class="flex flex-row w-full justify-center mt-15 mb-5">
-        <a href="">Ver Catálogo</a>
+        <a href="/catalog" class="text-white bg-black text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl border p-1.5 md:p-3 rounded-4xl p-2">Ver Catálogo</a>
     </div>
 
 </section>
