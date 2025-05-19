@@ -109,8 +109,8 @@
         <p class="text-black font-bold text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">Encuentra las mejores motocicletas del mercado</p>
     </div>
 
-    <!--pl-70 pr-70-->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 pt-4 mb-8 md:pl-70 md:pr-70 place-items-center">
+    <!--md:pl-70 md:pr-70 lg:pl:10 lg:pr:10-->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 pt-4 mb-8 md:pl-30 md:pr-30  lg:pl-50 lg:pr-50 xl:pl-70 xl:pr-70  place-items-center">
 
         {#each products as product}
         <ProductCard
