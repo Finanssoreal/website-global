@@ -126,4 +126,9 @@
                 alt={product.alt} />
         {/each}
     </div>
+
+    <div class="flex flex-row w-full justify-center mt-15 mb-5">
+        <a href="">Ver Catálogo</a>
+    </div>
+
 </section>
