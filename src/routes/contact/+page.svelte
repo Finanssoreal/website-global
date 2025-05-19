@@ -81,7 +81,7 @@
                             class="bg-black border-white text-white font-bold text-base md:text-xl md:w-[150px] lg:text-2xl xl:text-xl mt-40 mr-40
                                            w-24 h-9 lg:w-32 lg:h-10 rounded-full shadow-lg">
                             <!-- <span -->
-                            <!--     class="loading loading-spinner loading-lg text-warning"> -->
+                            <!--     class="loading loading-spinner loading-lg text-warning -"> -->
                             <!-- </span> -->
                             Enviar
                         </button>
