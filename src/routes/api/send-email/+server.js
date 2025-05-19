@@ -72,6 +72,6 @@ ${message}
     })
 
     console.log(" Correo enviado:", info.messageId)
-
+    // api
     return json({ success: true })
 }

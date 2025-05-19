@@ -23,6 +23,6 @@ export async function POST({ request }) {
     const data = await response.json()
 
     console.log("Respuesta de Google:", data)
-
+    // api
     return json(data)
 }
