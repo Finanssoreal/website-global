@@ -1,3 +1,40 @@
+
+<script>
+    import ProductCard from "$lib/components/Card.svelte"
+
+    const products = [
+        {
+            brand: "HONDA",
+            model: "XR 190 L",
+            price: "Q 13,000.00",
+            imageSrc: "/images/Recursos/red-moto.png",
+            alt: "Motocicleta Honda",
+        },
+        {
+            brand: "HONDA",
+            model: "XR 250 Tornado",
+            price: "Q 16,500.00",
+            imageSrc: "/images/Recursos/red-moto.png",
+            alt: "Motocicleta Honda Tornado",
+        },
+        {
+            brand: "HONDA",
+            model: "CB190R",
+            price: "Q 18,200.00",
+            imageSrc: "/images/Recursos/red-moto.png",
+            alt: "Motocicleta CB190R",
+        },
+        {
+            brand: "HONDA",
+            model: "DIO",
+            price: "Q 10,800.00",
+            imageSrc: "/images/Recursos/red-moto.png",
+            alt: "Motocicleta Honda DIO",
+        },
+    ]
+</script>
+
+
 <section>
     <div class="w-full h-70 sm:h-100 md:h-118 bg-primary">
         <div class="flex items-center justify-center w-full">
@@ -20,7 +57,7 @@
 
 
 <section>
-    <div class="w-full h-140 bg-cover bg-center pt-20 "
+    <div class="w-full h-50 sm:h-70 md:h-95 lg:h-105 xl:h-125 bg-cover bg-center pt-10 md:pt-15  "
         style="background-image: url('images/Recursos/banner-image.png');"
     >
 
@@ -28,15 +65,15 @@
     <div class="flex flex-col ">
 
         <div class="flex flex-row w-full pl-5">
-            <p class="text-white font-bold text-4xl">DURABILIDAD</p>
+            <p class="text-white font-bold text-sm sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">DURABILIDAD</p>
         </div>
 
         <div class="flex flex-row w-full pl-5">
-            <p class="text-white font-bold text-4xl ">POTENCIA Y COMODIDAD</p>
+            <p class="text-white font-bold text-sm sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">POTENCIA Y COMODIDAD</p>
         </div>
 
-        <div class="flex flex-row w-full pl-5 pt-15">
-            <a href="/catalog" class="text-white text-2xl border p-3 rounded-4xl ">¡Adquiérela ahora! </a>
+        <div class="flex flex-row w-full pl-5 pt-5 md:pt-10">
+            <a href="/catalog" class="text-white text-sm sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl border p-1.5 md:p-3 rounded-4xl ">¡Adquiérela ahora! </a>
         </div>
 
     </div>
@@ -53,11 +90,11 @@
 
         <div class="flex flex-row w-full justify-around mt-5">
 
-            <div class="h-40 w-40"><img src="images/Navbar/LOGOGLOBAL.png" alt="Suzuki"></div>
-            <div class="h-40 w-40"><img src="images/Navbar/LOGOGLOBAL.png" alt="Bajaj"></div>
-            <div class="h-40 w-40"><img src="images/Navbar/LOGOGLOBAL.png" alt="TVS"></div>
-            <div class="h-40 w-40"><img src="images/Navbar/LOGOGLOBAL.png" alt="Freedom"></div>
-            <div class="h-40 w-40"><img src="images/Navbar/LOGOGLOBAL.png" alt="Treck"></div>
+            <div class="h-40 w-40"><img src="images/Inicio/logo_suzuki.png" alt="Suzuki"></div>
+            <div class="h-40 w-40"><img src="images/Inicio/Bajaj-Logo.png" alt="Bajaj"></div>
+            <div class="h-40 w-40"><img src="images/Inicio/logo-vts.png" alt="TVS"></div>
+            <div class="h-40 w-40"><img src="images/Inicio/logo-Freedom.png" alt="Freedom"></div>
+            <div class="h-40 w-40"><img src="images/Inicio/logo-treckmotors.png" alt="Treck"></div>
 
 
         </div>
@@ -71,81 +108,20 @@
     <div class="flex flex-row w-full justify-center mt-5 mb-5">
         <p class="text-black font-bold text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">Encuentra las mejores motocicletas del mercado</p>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 pt-4 mb-8 pl-70 pr-70  place-items-center">
 
-        <!-- Card 1 -->
-        <div class="flex flex-col bg-white shadow-xl rounded-lg p-3 w-60">
-          <p class="text-lg font-bold">HONDA</p>
+    <!--pl-70 pr-70-->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 pt-4 mb-8 md:pl-70 md:pr-70 place-items-center">
 
-          <div class="flex flex-row justify-center ">
-            <div class="bg-amber-400 h-40 w-50"><img src="images/Recursos/red-moto.png" alt="Motocicleta Honda"></div>
-          </div>
-
-          <div class="flex flex-row justify-end mt-3">
-          <p class="text-gray-600">XR 190 L</p>
-         </div>
-
-         <div class="flex flex-row justify-end mt-3">
-            <p class="text-gray-600">Q 13,000.00</p>
-           </div>
-
-        </div>
-
-        <!-- Card 2 -->
-        <div class="flex flex-col bg-white shadow-xl rounded-lg p-3 w-60">
-            <p class="text-lg font-bold">HONDA</p>
-
-            <div class="flex flex-row justify-center ">
-              <div class="bg-amber-400 h-40 w-50"><img src="images/Recursos/red-moto.png" alt="Motocicleta Honda"></div>
-            </div>
-
-            <div class="flex flex-row justify-end mt-3">
-            <p class="text-gray-600">XR 190 L</p>
-           </div>
-
-           <div class="flex flex-row justify-end mt-3">
-              <p class="text-gray-600">Q 13,000.00</p>
-             </div>
-
-          </div>
+        {#each products as product}
+        <ProductCard
+            brand={product.brand}
+            model={product.model}
+            price={product.price}
+            imageSrc={product.imageSrc}
+            alt={product.alt} />
+        {/each}
 
 
-          <!-- Card 3 -->
-        <div class="flex flex-col bg-white shadow-xl rounded-lg p-3 w-60">
-            <p class="text-lg font-bold">HONDA</p>
-
-            <div class="flex flex-row justify-center ">
-              <div class="bg-amber-400 h-40 w-50"><img src="images/Recursos/red-moto.png" alt="Motocicleta Honda"></div>
-            </div>
-
-            <div class="flex flex-row justify-end mt-3">
-            <p class="text-gray-600">XR 190 L</p>
-           </div>
-
-           <div class="flex flex-row justify-end mt-3">
-              <p class="text-gray-600">Q 13,000.00</p>
-             </div>
-          </div>
-
-
-           <!-- Card 4 -->
-        <div class="flex flex-col bg-white shadow-xl rounded-lg p-3 w-60">
-            <p class="text-lg font-bold">HONDA</p>
-
-            <div class="flex flex-row justify-center ">
-              <div class="bg-amber-400 h-40 w-50"><img src="images/Recursos/red-moto.png" alt="Motocicleta Honda"></div>
-            </div>
-
-            <div class="flex flex-row justify-end mt-3">
-            <p class="text-gray-600">XR 190 L</p>
-           </div>
-
-           <div class="flex flex-row justify-end mt-3">
-              <p class="text-gray-600">Q 13,000.00</p>
-             </div>
-          </div>
-
-
-      </div>
+    </div>
 
 </section>

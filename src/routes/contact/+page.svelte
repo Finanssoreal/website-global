@@ -69,12 +69,13 @@
                         placeholder="Cargo"
                         class="input input-bordered w-full lg:w-48 lg:h-9 bg-transparent text-white border-white placeholder-white" />
 
-                    <textarea
+                    <input
                         required
                         name="message"
                         placeholder="Escribe el motivo de tu mensaje"
-                        class="textarea textarea-bordered w-58 sm:w-100 lg:h-30 bg-transparent text-white border-white placeholder-white mt-2">
-                    </textarea>
+                        class="textarea textarea-bordered w-58 sm:w-100 lg:h-30 bg-transparent text-white border-white placeholder-white mt-2" />
+
+
                     <div class="flex flex-col items-center justify-center mt-2">
                         <button
                             class="bg-black border-white text-white font-bold text-base md:text-xl md:w-[150px] lg:text-2xl xl:text-xl mt-40 mr-40
