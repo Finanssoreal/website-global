@@ -147,42 +147,50 @@
                         required
                         name="name"
                         type="text"
+                        maxlength="20"
                         placeholder="Nombre"
                         class="input input-bordered w-full lg:w-48 lg:h-9 bg-transparent text-white border-white placeholder-white" />
                     <input
                         required
                         name="surname"
                         type="text"
+                        maxlength="20"
                         placeholder="Apellidos"
                         class="input input-bordered w-full lg:w-48 lg:h-9 bg-transparent text-white border-white placeholder-white" />
                     <input
                         required
                         name="email"
-                        type="text"
+                        type="email"
+                        maxlength="20"
                         placeholder="Email"
                         class="input input-bordered w-full lg:w-48 lg:h-9 bg-transparent text-white border-white placeholder-white" />
                     <input
                         required
                         name="phone"
-                        type="text"
+                        type="tel"
+                        maxlength="15"
                         placeholder="Teléfono"
                         class="input input-bordered w-full lg:w-48 lg:h-9 bg-transparent text-white border-white placeholder-white" />
                     <input
                         required
                         name="company"
                         type="text"
+                        maxlength="20"
                         placeholder="Empresa"
                         class="input input-bordered w-full lg:w-48 lg:h-9 bg-transparent text-white border-white placeholder-white" />
                     <input
                         required
                         name="position"
                         type="text"
+                        maxlength="20"
                         placeholder="Cargo"
                         class="input input-bordered w-full lg:w-48 lg:h-9 bg-transparent text-white border-white placeholder-white" />
 
                     <input
                         required
                         name="message"
+                        maxlength="500"
+                        type="text"
                         placeholder="Escribe el motivo de tu mensaje"
                         class="textarea textarea-bordered w-58 h-20 sm:w-100 sm:h-30 bg-transparent text-xs sm:text-base text-white border-white placeholder-white" />
                     <div class="col-span-2 flex justify-center">

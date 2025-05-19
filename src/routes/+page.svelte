@@ -1,4 +1,3 @@
-
 <script>
     import ProductCard from "$lib/components/Card.svelte"
 
@@ -34,7 +33,6 @@
     ]
 </script>
 
-
 <section>
     <div class="w-full h-70 sm:h-100 md:h-118 bg-primary">
         <div class="flex items-center justify-center w-full">
@@ -55,66 +53,77 @@
     </div>
 </section>
 
-
 <section>
-    <div class="w-full h-50 sm:h-70 md:h-95 lg:h-105 xl:h-125 bg-cover bg-center pt-10 md:pt-15  "
-        style="background-image: url('images/Recursos/banner-image.png');"
-    >
+    <div
+        class="w-full h-50 sm:h-70 md:h-95 lg:h-105 xl:h-125 bg-cover bg-center pt-10 md:pt-15"
+        style="background-image: url('images/Recursos/banner-image.png');">
+        <!--Contenedor del texto del banner-->
+        <div class="flex flex-col">
+            <div class="flex flex-row w-full pl-5">
+                <p
+                    class="text-white font-bold text-sm sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+                    DURABILIDAD
+                </p>
+            </div>
 
-    <!--Contenedor del texto del banner-->
-    <div class="flex flex-col ">
+            <div class="flex flex-row w-full pl-5">
+                <p
+                    class="text-white font-bold text-sm sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+                    POTENCIA Y COMODIDAD
+                </p>
+            </div>
 
-        <div class="flex flex-row w-full pl-5">
-            <p class="text-white font-bold text-sm sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">DURABILIDAD</p>
+            <div class="flex flex-row w-full pl-5 pt-5 md:pt-10">
+                <a
+                    href="/catalog"
+                    class="text-white text-sm sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl border p-1.5 md:p-3 rounded-4xl">
+                    ¡Adquiérela ahora!
+                </a>
+            </div>
         </div>
-
-        <div class="flex flex-row w-full pl-5">
-            <p class="text-white font-bold text-sm sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">POTENCIA Y COMODIDAD</p>
-        </div>
-
-        <div class="flex flex-row w-full pl-5 pt-5 md:pt-10">
-            <a href="/catalog" class="text-white text-sm sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl border p-1.5 md:p-3 rounded-4xl ">¡Adquiérela ahora! </a>
-        </div>
-
-    </div>
-
     </div>
 </section>
-
 
 <section>
     <div class="flex flex-col bg-primary">
         <div class="flex flex-row w-full justify-center mt-5">
-            <p class="text-black font-bold text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">Nuestras marcas</p>
+            <p
+                class="text-black font-bold text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+                Nuestras marcas
+            </p>
         </div>
 
         <div class="flex flex-row w-full justify-around mt-5">
-
-            <div class="h-40 w-40 sm:h-60 sm:w-60 md:h-80 md:w-80 lg:h-100 lg:w-100 xl:h-120 xl:w-120"><img src="images/Inicio/logo_suzuki.png" alt="Suzuki"></div>
-            <div class="h-40 w-40 sm:h-60 sm:w-60 md:h-80 md:w-80 lg:h-100 lg:w-100 xl:h-120 xl:w-120"><img src="images/Inicio/Bajaj-Logo.png" alt="Bajaj"></div>
+            <div
+                class="h-40 w-40 sm:h-60 sm:w-60 md:h-80 md:w-80 lg:h-100 lg:w-100 xl:h-120 xl:w-120">
+                <img src="images/Inicio/logo_suzuki.png" alt="Suzuki" />
+            </div>
+            <div
+                class="h-40 w-40 sm:h-60 sm:w-60 md:h-80 md:w-80 lg:h-100 lg:w-100 xl:h-120 xl:w-120">
+                <img src="images/Inicio/Bajaj-Logo.png" alt="Bajaj" />
+            </div>
         </div>
     </div>
 </section>
 
-
 <section>
     <div class="flex flex-row w-full justify-center mt-5 mb-5">
-        <p class="text-black font-bold text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">Encuentra las mejores motocicletas del mercado</p>
+        <p
+            class="text-black font-bold text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+            Encuentra las mejores motocicletas del mercado
+        </p>
     </div>
 
     <!--md:pl-70 md:pr-70 lg:pl:10 lg:pr:10-->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 pt-4 mb-8 md:pl-30 md:pr-30  lg:pl-50 lg:pr-50 xl:pl-70 xl:pr-70  place-items-center">
-
+    <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 pt-4 mb-8 md:pl-30 md:pr-30 lg:pl-50 lg:pr-50 xl:pl-70 xl:pr-70 place-items-center">
         {#each products as product}
-        <ProductCard
-            brand={product.brand}
-            model={product.model}
-            price={product.price}
-            imageSrc={product.imageSrc}
-            alt={product.alt} />
+            <ProductCard
+                brand={product.brand}
+                model={product.model}
+                price={product.price}
+                imageSrc={product.imageSrc}
+                alt={product.alt} />
         {/each}
-
-
     </div>
-
 </section>
