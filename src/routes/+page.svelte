@@ -84,23 +84,16 @@
 
 <section>
     <div class="flex flex-col bg-primary">
-        <div class="flex flex-row w-full justify-center">
+        <div class="flex flex-row w-full justify-center mt-5">
             <p class="text-black font-bold text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">Nuestras marcas</p>
         </div>
 
         <div class="flex flex-row w-full justify-around mt-5">
 
-            <div class="h-40 w-40"><img src="images/Inicio/logo_suzuki.png" alt="Suzuki"></div>
-            <div class="h-40 w-40"><img src="images/Inicio/Bajaj-Logo.png" alt="Bajaj"></div>
-            <div class="h-40 w-40"><img src="images/Inicio/logo-vts.png" alt="TVS"></div>
-            <div class="h-40 w-40"><img src="images/Inicio/logo-Freedom.png" alt="Freedom"></div>
-            <div class="h-40 w-40"><img src="images/Inicio/logo-treckmotors.png" alt="Treck"></div>
-
-
+            <div class="h-40 w-40 sm:h-60 sm:w-60 md:h-80 md:w-80 lg:h-100 lg:w-100 xl:h-120 xl:w-120"><img src="images/Inicio/logo_suzuki.png" alt="Suzuki"></div>
+            <div class="h-40 w-40 sm:h-60 sm:w-60 md:h-80 md:w-80 lg:h-100 lg:w-100 xl:h-120 xl:w-120"><img src="images/Inicio/Bajaj-Logo.png" alt="Bajaj"></div>
         </div>
-
     </div>
-
 </section>
 
 
