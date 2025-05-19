@@ -6,13 +6,13 @@ import {
     MAILTRAP_PASS,
 } from "$env/static/private"
 import { json } from "@sveltejs/kit"
-import { isRateLimited } from "$lib/rate-limiter" // <--- importar aquí
+import { isRateLimited } from "$lib/rate-limiter"
 
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function POST({ request, getClientAddress }) {
     const ip = getClientAddress()
     if (isRateLimited(ip)) {
-        console.warn(`⛔ IP bloqueada temporalmente por rate limit: ${ip}`)
+        console.warn(`IP bloqueada temporalmente por rate limit: ${ip}`)
         return json(
             { error: "Demasiadas solicitudes. Intenta más tarde." },
             { status: 429 },
@@ -22,7 +22,7 @@ export async function POST({ request, getClientAddress }) {
     const { name, surname, email, phone, company, position, message } =
         await request.json()
 
-    console.log("📥 Datos recibidos:", {
+    console.log("Datos recibidos:", {
         name,
         surname,
         email,
@@ -33,7 +33,7 @@ export async function POST({ request, getClientAddress }) {
     })
 
     if (!name || !email || !message) {
-        console.warn("⚠️ Faltan campos requeridos")
+        console.warn("Faltan campos requeridos")
         return json({ error: "Campos requeridos faltantes" }, { status: 400 })
     }
 
@@ -71,7 +71,7 @@ ${message}
 `,
     })
 
-    console.log("📤 Correo enviado:", info.messageId)
+    console.log(" Correo enviado:", info.messageId)
 
     return json({ success: true })
 }

@@ -6,7 +6,7 @@
         const form = event.target
 
         const token = grecaptcha.getResponse()
-        console.log("🔐 Token reCAPTCHA:", token) // Verificar si se obtiene el token
+        console.log("Token reCAPTCHA:", token) // Verificar si se obtiene el token
 
         if (!token) {
             alert("Por favor completa el reCAPTCHA")
@@ -93,7 +93,7 @@
         )
 
         const emailData = await emailResponse.json()
-        console.log("📬 Respuesta del envío de correo:", emailData)
+        console.log("Respuesta del envío de correo:", emailData)
 
         if (!emailData.success) {
             alert("No se pudo enviar el correo. Intenta más tarde.")
