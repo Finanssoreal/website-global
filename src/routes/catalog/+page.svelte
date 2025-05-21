@@ -68,127 +68,42 @@
 </script>
 
 
-<div class="flex flex-row ">
 
-<!--
-<section>
-
-
-      <form class="bg-white shadow-md rounded-md p-6 w-72 font-sans text-gray-900 mt-20 ml-5">
-        <h2 class="font-extrabold text-lg mb-4">Filtros</h2>
-
-        <div class="mb-6">
-          <label class="block mb-1 font-semibold text-base cursor-pointer">Marca</label>
-          <select class="select select-bordered w-full text-sm text-gray-700">
-            <option disabled selected>Seleccione una marca</option>
-            <option>Marca 1</option>
-            <option>Marca 2</option>
-            <option>Marca 3</option>
-          </select>
-        </div>
-
-        <div class="mb-6">
-          <p class="font-semibold text-base mb-3">Precio</p>
-          <div class="flex justify-between mb-3">
-            <div class="w-1/2 pr-2">
-              <label class="block text-xs text-gray-700 mb-1">Mín</label>
-              <input
-                type="text"
-                class="input input-bordered w-full input-xs text-gray-400"
-                readonly
-                bind:value={minDisplay}
-              />
-            </div>
-            <div class="w-1/2 pl-2">
-              <label class="block text-xs text-gray-700 mb-1">Máx</label>
-              <input
-                type="text"
-                class="input input-bordered w-full input-xs text-gray-400"
-                readonly
-                bind:value={maxDisplay}
-              />
-            </div>
-          </div>
-
-          <div class="relative h-6 mb-6">
-
-            <div
-              class="absolute h-1 bg-black rounded-full top-1/2 transform -translate-y-1/2 z-0"
-              style="left: {leftPercent}%; width: {widthPercent}%"
-            ></div>
-
-
-            <input
-              type="range"
-              min={min}
-              max={max}
-              step="100"
-              bind:value={rangeMin}
-              on:input={handleMinChange}
-              class="absolute w-full h-1 appearance-none bg-transparent pointer-events-none top-1/2 transform -translate-y-1/2 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-black [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:shadow [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-black [&::-moz-range-thumb]:pointer-events-auto"
-            />
-
-
-            <input
-              type="range"
-              min={min}
-              max={max}
-              step="100"
-              bind:value={rangeMax}
-              on:input={handleMaxChange}
-              class="absolute w-full h-1 appearance-none bg-transparent pointer-events-none top-1/2 transform -translate-y-1/2 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-black [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:shadow [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-black [&::-moz-range-thumb]:pointer-events-auto"
-            />
-          </div>
-        </div>
-
-        <div class="mb-6">
-          <label class="block mb-1 font-semibold text-base cursor-pointer">Tipo</label>
-          <select class="select select-bordered w-full text-sm text-gray-700">
-            <option disabled selected>Seleccione un tipo</option>
-            <option>Tipo 1</option>
-            <option>Tipo 2</option>
-            <option>Tipo 3</option>
-          </select>
-        </div>
-
-        <button type="submit" class="btn btn-neutral bg-black btn-block rounded-full text-sm shadow-lg">
-          Filtrar
-        </button>
-      </form>
-
-</section>
--->
-
-<section>
-
-<!-- Solo se muestra en pantallas grandes -->
-<div class="hidden md:block mt-20 ml-5">
-    <FilterPanel />
-  </div>
-
-    <!-- Botón solo visible en pantallas pequeñas -->
-<div class="md:hidden p-4">
+   <!-- Botón solo visible en pantallas pequeñas -->
+   <div class="flex flex-row justify-center w-full pl-30 pr-30 sm:pl-60 sm:pr-60 md:pl-70 md:pr-70 pt-10 lg:hidden p-4">
     <button
       on:click={() => (showFilters = true)}
       class="btn btn-neutral bg-black w-full text-white rounded-full mb-4 z-10"
     >
-      Mostrar filtros
+      Filtrar
     </button>
   </div>
+
+
+<div class="flex flex-row ">
+
+<section>
+
+<!-- Solo se muestra en pantallas grandes -->
+<div class="hidden lg:block mt-20 ml-5">
+    <FilterPanel />
+  </div>
+
+
 
   <!-- Panel flotante encima del contenido en móviles -->
   {#if showFilters}
     <!-- Fondo oscuro -->
-    <div class="fixed inset-0 bg-opacity-500 z-40 md:hidden" on:click={() => (showFilters = false)}></div>
+    <div class="fixed inset-0 bg-opacity-500 z-40 lg:hidden" on:click={() => (showFilters = false)}></div>
 
     <!-- Panel lateral -->
     <div
-      class="fixed top-0 left-0 h-full w-72 bg-white z-50 p-6 shadow-lg overflow-y-auto md:hidden"
+      class="fixed top-0 left-0 h-full w-80 bg-white z-50 pt-5 shadow-lg overflow-y-auto lg:hidden"
     >
-      <div class="flex justify-end mb-4">
+      <div class="flex justify-end mb-4 pr-4">
         <button
           on:click={() => (showFilters = false)}
-          class="btn btn-sm btn-outline"
+          class="btn btn-sm btn-outline "
         >
           ✕
         </button>
@@ -202,16 +117,16 @@
 
 
 <section>
-    <div class="flex flex-row w-full justify-center mt-5 mb-5">
+    <div class="flex flex-row w-full justify-center pl-4 sm:pl-16 md:pl-34 lg:pr-0 lg:pl-10 xl:pl-42  mt-5 mb-5">
         <p
-            class="text-black font-bold text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+            class="text-black font-bold text-center text-sm sm:text-base  md:text-lg lg:text-xl xl:text-2xl">
             Encuentra las mejores motocicletas del mercado
         </p>
     </div>
 
     <!--md:pl-30 md:pr-30  lg:pl-50 lg:pr-50 xl:pl-70 xl:pr-70 -->
     <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 pt-4 mb-8 lg:pl-30 lg:pr-20 xl:pl-60 xl:pr-20 place-items-center">
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 pt-4 mb-8 pl-4 sm:pl-18 md:pl-34 lg:pl-30 lg:pr-20 xl:pl-60 xl:pr-20 place-items-center">
         {#each products as product}
             <ProductCard
                 brand={product.brand}
