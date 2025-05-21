@@ -27,7 +27,7 @@
             brand: "HONDA",
             model: "DIO",
             price: "Q 10,800.00",
-            imageSrc: "/images/Recursos/red-moto.png",
+            imageSrc: "/images/Recursos/PULSAR-NS-200-ROJA.png",
             alt: "Motocicleta Honda DIO",
         },
     ]
@@ -92,15 +92,16 @@
                 Nuestras marcas
             </p>
         </div>
-
+<!--h-40 w-40 sm:h-60 sm:w-60 md:h-80 md:w-80 lg:h-100 lg:w-100 xl:h-120 xl:w-120
+h-40 w-40 sm:h-60 sm:w-60 md:h-80 md:w-80 lg:h-100 lg:w-100 xl:h-120 xl:w-120-->
         <div class="flex flex-row w-full justify-around mt-5">
             <div
-                class="h-40 w-40 sm:h-60 sm:w-60 md:h-80 md:w-80 lg:h-100 lg:w-100 xl:h-120 xl:w-120">
-                <img src="images/Inicio/logo_suzuki.png" alt="Suzuki" />
+                class="xl:h-28 xl:w-100 lg:h-25 lg:w-80 md:h-20 md:w-70 sm:h-20 sm:w-60 h-15 w-40  ">
+                <img src="images/Inicio/logo-suzuki.png" alt="Suzuki" />
             </div>
             <div
-                class="h-40 w-40 sm:h-60 sm:w-60 md:h-80 md:w-80 lg:h-100 lg:w-100 xl:h-120 xl:w-120">
-                <img src="images/Inicio/Bajaj-Logo.png" alt="Bajaj" />
+                class="xl:h-28 xl:w-100 lg:h-25 lg:w-80 md:h-20 md:w-70 sm:h-20 sm:w-60 h-15 w-40">
+                <img src="images/Inicio/logo-bajaj.png" alt="Bajaj" />
             </div>
         </div>
     </div>
