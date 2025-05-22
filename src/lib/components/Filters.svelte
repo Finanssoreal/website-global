@@ -40,9 +40,9 @@
       <label class="block mb-1 font-semibold text-base cursor-pointer">Marca</label>
       <select class="select select-bordered w-full text-sm text-gray-700">
         <option disabled selected>Seleccione una marca</option>
-        <option>Marca 1</option>
-        <option>Marca 2</option>
-        <option>Marca 3</option>
+        <option>Suzuki</option>
+        <option>Bajaj</option>
+
       </select>
     </div>
 
