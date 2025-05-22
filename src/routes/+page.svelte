@@ -1,7 +1,6 @@
 <script>
     import ProductCard from "$lib/components/Card.svelte"
     import products from "$lib/data/destacadas.json"
-
 </script>
 
 <section>
@@ -63,11 +62,11 @@
                 Nuestras marcas
             </p>
         </div>
-<!--h-40 w-40 sm:h-60 sm:w-60 md:h-80 md:w-80 lg:h-100 lg:w-100 xl:h-120 xl:w-120
+        <!--h-40 w-40 sm:h-60 sm:w-60 md:h-80 md:w-80 lg:h-100 lg:w-100 xl:h-120 xl:w-120
 h-40 w-40 sm:h-60 sm:w-60 md:h-80 md:w-80 lg:h-100 lg:w-100 xl:h-120 xl:w-120-->
         <div class="flex flex-row w-full justify-around mt-5">
             <div
-                class="xl:h-28 xl:w-100 lg:h-25 lg:w-80 md:h-20 md:w-70 sm:h-20 sm:w-60 h-15 w-40  ">
+                class="xl:h-28 xl:w-100 lg:h-25 lg:w-80 md:h-20 md:w-70 sm:h-20 sm:w-60 h-15 w-40">
                 <img src="images/Inicio/logo-suzuki.png" alt="Suzuki" />
             </div>
             <div
@@ -100,7 +99,10 @@ h-40 w-40 sm:h-60 sm:w-60 md:h-80 md:w-80 lg:h-100 lg:w-100 xl:h-120 xl:w-120-->
     </div>
 
     <div class="flex flex-row w-full justify-center mt-15 mb-5">
-        <a href="/catalog" class="text-white bg-black text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl border p-1.5 md:p-3 rounded-4xl p-2">Ver Catálogo</a>
+        <a
+            href="/catalog"
+            class="text-white bg-black text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl border p-1.5 md:p-3 rounded-4xl p-2">
+            Ver Catálogo
+        </a>
     </div>
-
 </section>
