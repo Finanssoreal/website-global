@@ -1,68 +1,8 @@
 <script>
     import ProductCard from "$lib/components/Card.svelte"
     import FilterPanel from "$lib/components/Filters.svelte"
+    import products from "$lib/data/motos.json"
 
-    const products = [
-        {
-            brand: "HONDA",
-            model: "XR 190 L",
-            price: "Q 13,000.00",
-            imageSrc: "/images/Recursos/red-moto.png",
-            alt: "Motocicleta Honda",
-        },
-        {
-            brand: "HONDA",
-            model: "XR 250 Tornado",
-            price: "Q 16,500.00",
-            imageSrc: "/images/Recursos/red-moto.png",
-            alt: "Motocicleta Honda Tornado",
-        },
-        {
-            brand: "HONDA",
-            model: "CB190R",
-            price: "Q 18,200.00",
-            imageSrc: "/images/Recursos/red-moto.png",
-            alt: "Motocicleta CB190R",
-        },
-        {
-            brand: "HONDA",
-            model: "DIO",
-            price: "Q 10,800.00",
-            imageSrc: "/images/Recursos/red-moto.png",
-            alt: "Motocicleta Honda DIO",
-        },
-    ]
-
-    // let min = 500;
-    // let max = 30000;
-    // let minGap = 100;
-
-    // let rangeMin = min;
-    // let rangeMax = max;
-
-    // $: minDisplay = `Q ${rangeMin.toLocaleString("es-GT")}`;
-    // $: maxDisplay = `Q ${rangeMax.toLocaleString("es-GT")}`;
-
-    // function handleMinChange(event) {
-    //   const value = parseInt(event.target.value);
-    //   if (value > rangeMax - minGap) {
-    //     rangeMin = rangeMax - minGap;
-    //   } else {
-    //     rangeMin = value;
-    //   }
-    // }
-
-    // function handleMaxChange(event) {
-    //   const value = parseInt(event.target.value);
-    //   if (value < rangeMin + minGap) {
-    //     rangeMax = rangeMin + minGap;
-    //   } else {
-    //     rangeMax = value;
-    //   }
-    // }
-
-    // $: leftPercent = ((rangeMin - min) / (max - min)) * 100;
-    // $: widthPercent = ((rangeMax - rangeMin) / (max - min)) * 100;
 
     let showFilters = false;
 </script>

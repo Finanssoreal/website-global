@@ -1,36 +1,7 @@
 <script>
     import ProductCard from "$lib/components/Card.svelte"
+    import products from "$lib/data/destacadas.json"
 
-    const products = [
-        {
-            brand: "HONDA",
-            model: "XR 190 L",
-            price: "Q 13,000.00",
-            imageSrc: "/images/Recursos/red-moto.png",
-            alt: "Motocicleta Honda",
-        },
-        {
-            brand: "HONDA",
-            model: "XR 250 Tornado",
-            price: "Q 16,500.00",
-            imageSrc: "/images/Recursos/red-moto.png",
-            alt: "Motocicleta Honda Tornado",
-        },
-        {
-            brand: "HONDA",
-            model: "CB190R",
-            price: "Q 18,200.00",
-            imageSrc: "/images/Recursos/red-moto.png",
-            alt: "Motocicleta CB190R",
-        },
-        {
-            brand: "HONDA",
-            model: "DIO",
-            price: "Q 10,800.00",
-            imageSrc: "/images/Recursos/PULSAR-NS-200-ROJA.png",
-            alt: "Motocicleta Honda DIO",
-        },
-    ]
 </script>
 
 <section>
