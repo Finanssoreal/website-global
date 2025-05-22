@@ -234,3 +234,23 @@ body {
 .animate-slide {
     animation: slide 7s linear infinite;
 }
+
+/* animacion para las imagenes de las motos  */
+.hover-zoom {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-zoom img {
+    transition: transform 0.4s ease;
+    will-change: transform;
+    transform-origin: center center;
+}
+
+.hover-zoom:hover img {
+    transform: scale(3); /* Aumenta este número si quieres más zoom */
+}
+
+.hover-zoom:hover {
+    cursor: zoom-in;
+}
