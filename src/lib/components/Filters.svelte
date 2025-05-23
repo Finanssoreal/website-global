@@ -1,11 +1,20 @@
 
 <script>
+
+import { createEventDispatcher } from 'svelte';
+
+
+const dispatch = createEventDispatcher();
+
      let min = 500;
     let max = 30000;
     let minGap = 100;
 
     let rangeMin = min;
     let rangeMax = max;
+
+    let selectedBrand = "";
+    //let selectedType = "";
 
     $: minDisplay = `Q ${rangeMin.toLocaleString("es-GT")}`;
     $: maxDisplay = `Q ${rangeMax.toLocaleString("es-GT")}`;
@@ -28,20 +37,32 @@
       }
     }
 
+    function applyFilters(e) {
+    e.preventDefault();
+    dispatch('filter', {
+      brand: selectedBrand,
+      //type: selectedType,
+      minPrice: rangeMin,
+      maxPrice: rangeMax
+    });
+  }
+
+
     $: leftPercent = ((rangeMin - min) / (max - min)) * 100;
     $: widthPercent = ((rangeMax - rangeMin) / (max - min)) * 100;
 </script>
 
 
-<form class="bg-white shadow-md rounded-md p-6 w-72 font-sans text-gray-900 mt-20 ml-5">
+<form on:submit={applyFilters} class="bg-white shadow-md rounded-md p-6 w-72 font-sans text-gray-900 mt-20 ml-5">
     <h2 class="font-extrabold text-lg mb-4">Filtros</h2>
 
     <div class="mb-6">
       <label class="block mb-1 font-semibold text-base cursor-pointer">Marca</label>
-      <select class="select select-bordered w-full text-sm text-gray-700">
+      <select bind:value={selectedBrand} class="select select-bordered w-full text-sm text-gray-700">
         <option disabled selected>Seleccione una marca</option>
         <option>Suzuki</option>
         <option>Bajaj</option>
+        <option value="">Todas las marcas</option>
 
       </select>
     </div>
@@ -100,6 +121,7 @@
       </div>
     </div>
 
+    <!--
     <div class="mb-6">
       <label class="block mb-1 font-semibold text-base cursor-pointer">Tipo</label>
       <select class="select select-bordered w-full text-sm text-gray-700">
@@ -109,6 +131,7 @@
         <option>Tipo 3</option>
       </select>
     </div>
+    -->
 
     <button type="submit" class="btn btn-neutral bg-black btn-block rounded-full text-sm shadow-lg">
       Filtrar
