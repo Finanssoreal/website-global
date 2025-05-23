@@ -24,23 +24,28 @@
     }
 </script>
 
-<div class="w-full h-full p-10">
-    <div class="grid grid-cols-2 gap-4 font-bold mt-5 p-3">
-        <div>
-            <h1 class="text-3xl text-left">{titulo}</h1>
+<div class="w-full h-full">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 font-bold p-3">
+        <div class="">
+            <h1 class="text-xl md:text-3xl text-left">{titulo}</h1>
 
-            <p class="text-center text-base font-medium">{descripcion}</p>
+            <p class="text-center text-base md:text-lg font-medium">
+                {descripcion}
+            </p>
 
-            <strong class="text-left text-2xl">{subtitulo}</strong>
-            <p class="text-left text-xl font-black mt-2">{precio}</p>
+            <strong class="text-left text-xl md:text-2xl">{subtitulo}</strong>
+            <p class="text-left text-base md:text-xl font-black mt-2">
+                {precio}
+            </p>
 
             {#each botones as { texto, tipo }}
-                <button class="btn {tipo} text-white mt-2 ml-2">
+                <button
+                    class="btn {tipo} text-white mt-2 w-35 md:w-40 ml-2 text-xs md:text-sm">
                     {texto}
                 </button>
             {/each}
 
-            <p class="text-center text-base font-medium mt-5">
+            <p class="text-center text-base md:text-lg font-medium mt-5">
                 {parrafoInferior}
             </p>
         </div>
