@@ -27,7 +27,7 @@
 <div class="w-full h-full">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 font-bold p-3">
         <div class="">
-            <h1 class="text-xl md:text-3xl text-left">{titulo}</h1>
+            <h1 class="text-xl select-none md:text-3xl text-left">{titulo}</h1>
 
             <p class="text-center text-base md:text-lg font-medium">
                 {descripcion}

@@ -8,28 +8,34 @@
 
   $: moto = specs.find(m => m.model.toLowerCase() === model.toLowerCase());
 
-    const especificaciones = [
+  $: motor = moto?.motor;
+  $: potencia = moto?.power ?? "N/A";
+  $: pistones = moto?.piston ?? "N/A";
+  $: combustible = moto?.fuel ?? "N/A";
+
+
+    $: especificaciones = [
         {
             titulo: "MOTOR",
-            valor: "4 Tiempos",
+            valor:motor,
             imagen: "/images/Especificaciones/motor.png",
             alt: "Motor",
         },
         {
             titulo: "POTENCIA",
-            valor: "7.7PH@7500",
+            valor: potencia,
             imagen: "/images/Especificaciones/integracion.png",
             alt: "Potencia",
         },
         {
             titulo: "PISTONES",
-            valor: "102 C.C",
+            valor: pistones,
             imagen: "/images/Especificaciones/pistones.png",
             alt: "Pistones",
         },
         {
             titulo: "COMBUSTIBLE",
-            valor: "2.77 GALONES",
+            valor: combustible,
             imagen: "/images/Especificaciones/conbustible.png",
             alt: "Combustible",
         },
