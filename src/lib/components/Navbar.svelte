@@ -19,7 +19,7 @@
     $: currentPath = $page.url.pathname
 </script>
 
-<div class="navbar bg-primary w-full z-50 shadow-lg h-20 md:w-full md:h-20">
+<div class="navbar bg-primary w-full z-50 h-20 md:w-full md:h-20">
     <div class="navbar-start">
         <!-- Botón móvil -->
         <div class="dropdown">
