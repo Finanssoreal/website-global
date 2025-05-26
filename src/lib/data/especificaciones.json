@@ -1,0 +1,48 @@
+[
+    {
+        "brand": "Suzuki",
+        "model": "GIXXER-SF250",
+        "price": "Q 19,472.00",
+        "imageSrc": "/images/Suzuki/GIXXER-SF250-AZUL.png",
+        "alt": "Motocicleta Suzuki GIXXER-SF250",
+        "colorVariants": [
+          "/images/Suzuki/GIXXER-SF250-AZUL.png",
+          "/images/Suzuki/GIXXER-SF250-AZUL-GRIX.png"
+        ]
+      },
+      {
+
+        "brand": "Bajaj",
+        "model": "DOMINAR-400",
+        "price": "Q 19,856.00",
+        "imageSrc": "/images/Bajaj/DOMINAR-400-VERDE.png",
+        "alt": "Motocicleta Bajaj DOMINAR-400",
+        "colorVariants": [
+          "/images/Bajaj/DOMINAR-400-VERDE.png"
+        ]
+      },
+      {
+        "brand": "Bajaj",
+        "model": "PULSAR-NS-200",
+        "price": "Q 18,700.00",
+        "imageSrc": "/images/Bajaj/PULSAR-NS-200-AZUL.png",
+        "alt": "Motocicleta Bajaj PULSAR-NS-200",
+        "colorVariants": [
+          "/images/Bajaj/PULSAR-NS-200-AZUL.png",
+          "/images/Bajaj/PULSAR-NS-200-BLANCA.png",
+          "/images/Bajaj/PULSAR-NS-200-ROJA.png"
+        ]
+      },
+      {
+        "brand": "Suzuki",
+        "model": "GIXXER-DF155",
+        "price": "Q 14,203.00",
+        "imageSrc": "/images/Suzuki/GIXXER-DF155-ROJA-GRIS.png",
+        "alt": "Motocicleta Suzuki GIXXER-DF155",
+        "colorVariants": [
+          "/images/Suzuki/GIXXER-DF155-AZUL.png",
+          "/images/Suzuki/GIXXER-DF155-NEGRA.png",
+          "/images/Suzuki/GIXXER-DF155-ROJA-GRIS.png"
+        ]
+      }
+]

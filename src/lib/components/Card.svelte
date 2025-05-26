@@ -6,6 +6,7 @@
     export let alt = "Imagen del producto"
 </script>
 
+<a href={`/product/${model}`}>
 <div
     class="flex flex-col bg-white shadow-xl rounded-lg p-3 w-60 transition hover:scale-110">
     <p class="text-lg font-bold">{brand}</p>
@@ -16,7 +17,7 @@
 
                 src={imageSrc}
                 {alt}
-                class="max-h-full max-w-full object-contai" />
+                class="max-h-full max-w-full object-contain" />
         </div>
     </div>
 
@@ -28,3 +29,4 @@
         <p class="text-gray-600">{price}</p>
     </div>
 </div>
+</a>

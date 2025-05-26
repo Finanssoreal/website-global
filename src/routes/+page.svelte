@@ -88,13 +88,16 @@ h-40 w-40 sm:h-60 sm:w-60 md:h-80 md:w-80 lg:h-100 lg:w-100 xl:h-120 xl:w-120-->
     <!--md:pl-70 md:pr-70 lg:pl:10 lg:pr:10-->
     <div
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 pt-4 mb-8 md:pl-30 md:pr-30 lg:pl-50 lg:pr-50 xl:pl-70 xl:pr-70 place-items-center">
+
         {#each products as product}
+
             <ProductCard
                 brand={product.brand}
                 model={product.model}
                 price={product.price}
                 imageSrc={product.imageSrc}
                 alt={product.alt} />
+
         {/each}
     </div>
 
