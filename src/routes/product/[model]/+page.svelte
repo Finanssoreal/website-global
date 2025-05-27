@@ -41,58 +41,73 @@
         },
     ]
 
-    const especificacionesMotor = [
+
+    $: motor_espec= moto?.motor2 ?? "N/A";
+    $: cilindraje= moto?.cilindraje ?? "N/A";
+    $: potencia_motor= moto?.potencia ?? "N/A";
+
+    $: torque= moto?.torque ?? "N/A";
+    $: embrague= moto?.embrague ?? "N/A";
+    $: alimentacion= moto?.alimentacion ?? "N/A";
+
+    $: caja= moto?.caja ?? "N/A";
+    $: diametro_carrera= moto?.diametro ?? "N/A";
+    $: arranque= moto?.arranque ?? "N/A";
+
+
+
+    $: especificacionesMotor = [
         {
             titulo: "MOTOR",
-            valor: "4 tiempos, refrigerado por aire, SOHC, SI, motor",
+            valor: motor_espec,
             imagen: "/images/Especificaciones/motor.png",
             alt: "Motor",
         },
         {
             titulo: "CILINDRAJE",
-            valor: "102 cc",
+            valor: cilindraje,
             imagen: "/images/Especificaciones/Cilindraje.png",
             alt: "Cilindraje",
         },
         {
             titulo: "POTENCIA",
-            valor: "7.7 Hp @ 7500 rpm",
+            valor: potencia_motor,
             imagen: "/images/Especificaciones/integracion.png",
             alt: "Potencia",
         },
         {
             titulo: "TORQUE",
-            valor: "8.24 Nm @ 5500 rpm",
+            valor: torque,
             imagen: "/images/Especificaciones/Torque.png",
             alt: "Torque",
         },
         {
             titulo: "EMBRAGUE",
-            valor: "Húmedo, placa múltiple",
+            valor: embrague,
             imagen: "/images/Especificaciones/Embrague.png",
             alt: "Embrague",
         },
         {
             titulo: "ALIMENTACIÓN",
-            valor: "Carburador",
+            valor: alimentacion,
             imagen: "/images/Especificaciones/Alimentacion.png",
             alt: "Alimentación",
         },
         {
             titulo: "CAJA",
-            valor: "4 Velocidades",
+            valor: caja,
             imagen: "/images/Especificaciones/Caja.jpg",
             alt: "Caja",
         },
         {
             titulo: "Diámetro y Carrera",
-            valor: " 47 mm x 58.8 mm",
+            valor: diametro_carrera,
             imagen: "/images/Especificaciones/Diametro.png",
             alt: "Diámetro",
         },
         {
             titulo: "Arranque",
-            valor: "Eléctrico y arranque a patada",
+            valor: arranque,
             imagen: "/images/Especificaciones/Arranque.png",
             alt: "Arranque",
         },
