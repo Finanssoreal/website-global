@@ -1,14 +1,41 @@
 <script>
     import ProductCard from "$lib/components/Card.svelte"
     import products from "$lib/data/destacadas.json"
+    let audio
+    let reproduciendo = false
+
+    function toggleAudio() {
+        if (!audio) return
+        if (reproduciendo) {
+            audio.pause()
+        } else {
+            audio.play()
+        }
+        reproduciendo = !reproduciendo
+    }
 </script>
 
 <section>
-    <div class="w-full h-70 sm:h-100 md:h-118 bg-primary">
+    <div class="w-full h-70 sm:h-100 md:h-125 bg-primary">
+        <button
+            on:click={toggleAudio}
+            class=" text-black text-xl hover:text-red-500 transition duration-200 ml-12 text-none mt-3"
+            aria-label="Reproducir o pausar sonido">
+            {#if reproduciendo}
+                <i class="fa-solid fa-volume-xmark"></i>
+            {:else}
+                <i class="fa-solid fa-volume-low"></i>
+            {/if}
+        </button>
+
+        <!-- Audio oculto -->
+        <audio bind:this={audio}>
+            <source src="/audio/Sonido-moto.mp3" type="audio/mpeg" />
+        </audio>
         <div class="flex items-center justify-center w-full">
             <div class="flex flex-col items-center justify-center">
                 <h1
-                    class="text-[80px] sm:text-[130px] md:text-[170px] lg:text-[200px] font-extrabold text-success/30 text-center">
+                    class="text-[80px] sm:text-[130px] md:text-[170px] lg:text-[200px] font-extrabold text-success/30 text-center text-none">
                     GLOBAL
                 </h1>
                 <div
@@ -88,16 +115,13 @@ h-40 w-40 sm:h-60 sm:w-60 md:h-80 md:w-80 lg:h-100 lg:w-100 xl:h-120 xl:w-120-->
     <!--md:pl-70 md:pr-70 lg:pl:10 lg:pr:10-->
     <div
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 pt-4 mb-8 md:pl-30 md:pr-30 lg:pl-50 lg:pr-50 xl:pl-70 xl:pr-70 place-items-center">
-
         {#each products as product}
-
             <ProductCard
                 brand={product.brand}
                 model={product.model}
                 price={product.price}
                 imageSrc={product.imageSrc}
                 alt={product.alt} />
-
         {/each}
     </div>
 
