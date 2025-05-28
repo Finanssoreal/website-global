@@ -16,10 +16,10 @@
 </script>
 
 <section>
-    <div class="w-full h-70 sm:h-100 md:h-125 bg-primary">
+    <div class="w-full h-75 sm:h-100 md:h-125 bg-primary">
         <button
             on:click={toggleAudio}
-            class=" text-black text-xl hover:text-red-500 transition duration-200 ml-12 text-none mt-3"
+            class=" text-black text-xl hover:text-red-500 transition duration-200 ml-12 text-none mt-0 sm:mt-3"
             aria-label="Reproducir o pausar sonido">
             {#if reproduciendo}
                 <i class="fa-solid fa-volume-xmark"></i>
