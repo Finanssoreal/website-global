@@ -112,7 +112,7 @@
 
     <!--md:pl-30 md:pr-30  lg:pl-50 lg:pr-50 xl:pl-70 xl:pr-70 -->
     <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 pt-4 mb-8 pl-4 sm:pl-18 md:pl-34 lg:pl-30 lg:pr-20 xl:pl-60 xl:pr-20 place-items-center">
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xl:gap-15 gap-4 pt-4 mb-8 pl-4 sm:pl-18 md:pl-34 lg:pl-30 lg:pr-20 xl:pl-40 xl:pr-20 place-items-center">
         {#each filteredProducts as product}
             <ProductCard
                 brand={product.brand}
