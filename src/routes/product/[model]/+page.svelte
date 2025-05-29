@@ -125,7 +125,7 @@
         imagenAlt={moto?.alt}
         botones={[
             { texto: "Quiero cotizar", tipo: "btn-success" },
-            { texto: "Simular Crédito", tipo: "btn-info" },
+           // { texto: "Simular Crédito", tipo: "btn-info" },
         ]} />
 </section>
 

@@ -18,9 +18,9 @@
     <div class="flex flex-row justify-around w-full mt-20">
       <div class="flex flex-col">
         <ul>
-          <li class="text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl"><a href="/">Inicio</a></li>
-          <li class="text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl"><a href="/catalog">Catálogo</a></li>
-          <li class="text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl"><a href="/contact">Contacto</a></li>
+          <li class="text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl hover:text-gray-400 "><a href="/">Inicio</a></li>
+          <li class="text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl hover:text-gray-400"><a href="/catalog">Catálogo</a></li>
+          <li class="text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl hover:text-gray-400"><a href="/contact">Contacto</a></li>
         </ul>
       </div>
 

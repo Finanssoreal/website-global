@@ -1,4 +1,5 @@
 <script>
+    import Colorvariant from "./ColorVariant.svelte";
     export let titulo = ""
     export let descripcion = ""
     export let subtitulo = ""
@@ -29,11 +30,11 @@
         <div class="">
             <h1 class="text-xl select-none md:text-3xl text-left">{titulo}</h1>
 
-            <p class="text-center text-base md:text-lg font-medium">
+            <p class="text-base md:text-lg font-medium mb-4">
                 {descripcion}
             </p>
 
-            <strong class="text-left text-xl md:text-2xl">{subtitulo}</strong>
+            <strong class="text-left text-xl md:text-2x">{subtitulo}</strong>
             <p class="text-left text-base md:text-xl font-black mt-2">
                 {precio}
             </p>
@@ -45,9 +46,21 @@
                 </button>
             {/each}
 
-            <p class="text-center text-base md:text-lg font-medium mt-5">
+            <p class="text-base md:text-lg font-medium mt-5">
                 {parrafoInferior}
             </p>
+
+
+                <p class="text-xl mt-5">Colores Disponibles</p>
+
+            <div class=" w-full grid grid-cols-3 gap-3 pr-70">
+                <Colorvariant imageSrc="/images/Bajaj/DOMINAR-400-VERDE.png" />
+                <Colorvariant />
+                <Colorvariant />
+
+
+            </div>
+
         </div>
 
         <div
