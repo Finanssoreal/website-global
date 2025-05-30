@@ -60,7 +60,7 @@
 
                 <p class="text-xl mt-5">Colores Disponibles</p>
 
-            <div class="bg-amber-300 w-full grid lg:grid-cols-3 lg:pr-28 xl:grid-cols-3 xl:pr-60 gap-2">
+            <div class=" w-full grid grid-cols-2 pr-20 sm:grid-cols-4 md:grid-cols-5 md:pr-10 lg:grid-cols-3 lg:pr-28 xl:grid-cols-4 xl:pr-20 gap-2">
 
                 {#each colorVariants as colorVariant}
                 <Colorvariant imageSrc={colorVariant} on:select={updateImage} />

@@ -1,7 +1,7 @@
 <script>
     import ProductCard from "$lib/components/Card.svelte"
     import FilterPanel from "$lib/components/Filters.svelte"
-    import products from "$lib/data/motos.json"
+    import products from "$lib/data/especificacionesmoto.json"
 
 
     function parsePrice(priceString) {
