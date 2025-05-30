@@ -7,7 +7,7 @@ import { createEventDispatcher } from 'svelte';
 const dispatch = createEventDispatcher();
 
      let min = 500;
-    let max = 30000;
+    let max = 90000;
     let minGap = 100;
 
     let rangeMin = min;
