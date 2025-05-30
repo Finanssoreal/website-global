@@ -1,5 +1,6 @@
 <script>
     import { page } from '$app/stores';
+    import ColorVariant from '$lib/components/ColorVariant.svelte'
     import ProductZoom from "$lib/components/ZoomCard.svelte"
     import specs from "$lib/data/especificacionesmoto.json"
 
@@ -123,6 +124,7 @@
         parrafoInferior={moto?.description2}
         imagenSrc={moto?.imageSrc}
         imagenAlt={moto?.alt}
+        colorVariants= {moto?.colorVariants}
         botones={[
             { texto: "Quiero cotizar", tipo: "btn-success" },
            // { texto: "Simular Crédito", tipo: "btn-info" },

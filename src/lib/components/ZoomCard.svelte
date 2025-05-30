@@ -8,8 +8,11 @@
     export let botones = []
     export let imagenSrc = ""
     export let imagenAlt = ""
+    export let colorVariants =[]
 
     let container
+
+    let selectedImage = imagenSrc;
 
     function handleMouseMove(event) {
         const img = container.querySelector("img")
@@ -23,6 +26,10 @@
         const img = container.querySelector("img")
         img.style.transformOrigin = "center center"
     }
+
+    function updateImage(event) {
+		selectedImage = event.detail.imageSrc;
+	}
 </script>
 
 <div class="w-full h-full">
@@ -53,10 +60,11 @@
 
                 <p class="text-xl mt-5">Colores Disponibles</p>
 
-            <div class=" w-full grid grid-cols-3 gap-3 pr-70">
-                <Colorvariant imageSrc="/images/Bajaj/DOMINAR-400-VERDE.png" />
-                <Colorvariant />
-                <Colorvariant />
+            <div class="bg-amber-300 w-full grid lg:grid-cols-3 lg:pr-28 xl:grid-cols-3 xl:pr-60 gap-2">
+
+                {#each colorVariants as colorVariant}
+                <Colorvariant imageSrc={colorVariant} on:select={updateImage} />
+                {/each}
 
 
             </div>
@@ -69,7 +77,7 @@
             on:mousemove={handleMouseMove}
             on:mouseleave={resetTransformOrigin}>
             <img
-                src={imagenSrc}
+                src={selectedImage}
                 alt={imagenAlt}
                 class="zoom-image relative z-10 w-auto h-50 sm:h-60 md:h-50 md:w-90 object-cover pointer-events-none" />
         </div>
