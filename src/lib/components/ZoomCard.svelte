@@ -47,10 +47,10 @@
             </p>
 
             {#each botones as { texto, tipo }}
-                <button
+                <a href="/cotizar"
                     class="btn {tipo} text-white mt-2 w-35 md:w-40 ml-2 text-xs md:text-sm">
                     {texto}
-                </button>
+                </a>
             {/each}
 
             <p class="text-base md:text-lg font-medium mt-5">
