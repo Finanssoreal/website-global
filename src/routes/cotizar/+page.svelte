@@ -21,8 +21,27 @@ async function handleSubmit(event){
 
 
 
-    console.log("Los datos enviados son: \n",form.nombre.value)
+    console.log("Los datos enviados son: \n",
+    {
+        name,
+        lastname,
+        phone,
+        email,
+        cui,
+        nit,
+        payment_method,
+        contact_type,
+        contact_hours,
+        department,
+        municipality,
+        motorcycle_model
+
+    })
 }
+
+
+
+
 </script>
 
 <section>
@@ -43,7 +62,7 @@ async function handleSubmit(event){
             <label class="block mb-2 text-sm font-medium">
               Apellidos <span class="text-red-500">*</span>
             </label>
-            <input type="text" name="lastname" placeholder="Apellidos" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
+            <input type="text" name="lastname" required placeholder="Apellidos" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
           </div>
 
           <!-- Número de celular y Correo -->
@@ -51,14 +70,14 @@ async function handleSubmit(event){
             <label class="block mb-2 text-sm font-medium">
               Número de celular <span class="text-red-500">*</span>
             </label>
-            <input type="tel" name="phone" placeholder="(+502) 0000-0000" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
+            <input type="tel" name="phone" required placeholder="(+502) 0000-0000" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
           </div>
 
           <div>
             <label class="block mb-2 text-sm font-medium">
               Correo electrónico <span class="text-red-500">*</span>
             </label>
-            <input type="email" name="email" placeholder="correo@ejemplo.com" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
+            <input type="email" name="email" required placeholder="correo@ejemplo.com" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
           </div>
 
           <!-- DPI y NIT -->
@@ -81,11 +100,12 @@ async function handleSubmit(event){
             <label class="block mb-2 text-sm font-medium">
               Método de pago <span class="text-red-500">*</span>
             </label>
-            <select name="payment_method" class="w-full px-3 py-2 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-gray-400">
+            <select name="payment_method" required class="w-full px-3 py-2 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-gray-400">
               <option value="" selected disabled>Seleccione</option>
               <option value="efectivo">Efectivo</option>
               <option value="financiamiento">Financiamiento</option>
               <option value="visa cuotas">Visa Cuotas</option>
+              <option value="Tarjeta de crédito">Tarjeta de crédito</option>
             </select>
           </div>
 
@@ -93,7 +113,7 @@ async function handleSubmit(event){
             <label class="block mb-2 text-sm font-medium">
               ¿Cómo deseas que te contactemos? <span class="text-red-500">*</span>
             </label>
-            <select name="contact_type" class="w-full px-3 py-2 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-gray-400">
+            <select name="contact_type" required class="w-full px-3 py-2 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-gray-400">
               <option value="" selected disabled>Seleccione</option>
               <option value="telefono">Teléfono</option>
               <option value="email">Correo electrónico</option>
@@ -114,9 +134,9 @@ async function handleSubmit(event){
             <label class="block mb-2 text-sm font-medium">
               ¿En qué horario te gustaría ser contactado? <span class="text-red-500">*</span>
             </label>
-            <select name="contact_hours" class="w-full px-3 py-2 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-gray-400">
+            <select name="contact_hours" required class="w-full px-3 py-2 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-gray-400">
               <option value="" selected disabled>Seleccione</option>
-              <option value="manana">Mañana (8:00 - 12:00)</option>
+              <option value="mañana">Mañana (8:00 - 12:00)</option>
               <option value="tarde">Tarde (12:00 - 17:00)</option>
 
             </select>
