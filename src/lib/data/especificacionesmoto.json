@@ -267,7 +267,7 @@
         "fuel": "3.4 GALONES",
         "motor2": "4 tiempos DTS-i, 4 válvulas, triple bujía, DOHC, enfriado por liquido",
         "cilindraje": "373.27 CC ",
-        "potencia": "",
+        "potencia": "39.43HP@8650rpm",
         "torque": "35 Nm @7000 rpm",
         "embrague": "Multidisco bañano en aceite + anti-rebote",
         "alimentacion": "Inyección eléctronica",
@@ -360,5 +360,34 @@
         "caja": "",
         "diametro": "",
         "arranque": "Electrico"
+    },
+    {
+        "brand": "Bajaj",
+        "model": "PULSAR-NS-400Z",
+        "description": "Diseñada para la adrenalina y equipada con un potente motor de 373 cc. Esta moto combina un poder inigualable con un estilo agresivo, estableciendo nuevos estándares en rendimiento y diseño.",
+        "label_promotion": "Precio de promoción",
+        "price": "Q 20,000.00",
+        "description2": "La Pulsar NS400Z es el equilibrio perfecto entre potencia, diseño y tecnología avanzada.",
+        "imageSrc": "/images/Bajaj/PULSAR-NS-400Z-ROJA.png",
+        "alt": "Motocicleta Bajaj PULSAR-NS-400Z",
+        "colorVariants": [
+            "/images/Bajaj/PULSAR-NS-400Z-BLANCA.png",
+            "/images/Bajaj/PULSAR-NS-400Z-NEGRA.png",
+            "/images/Bajaj/PULSAR-NS-400Z-NEGRA-CON-AMARILLO.png",
+            "/images/Bajaj/PULSAR-NS-400Z-ROJA.png"
+        ],
+        "motor": "4 Tiempos, DOHC cilindro único",
+        "power": "39,4 Hp @ 8500 rpm",
+        "piston": "373,27 CC",
+        "fuel": "3.17 galones",
+        "motor2": "4 Tiempos, DOHC cilindro único",
+        "cilindraje": "373,27 CC",
+        "potencia": "39,4 Hp @ 8500 rpm",
+        "torque": "35 N.m @ 7000 rpm",
+        "embrague": "Multi-Disco Bañado en Aceite con Slipper Cluth",
+        "alimentacion": "Inyección Electrónica",
+        "caja": "Manual de 6 velocidades (1 hacia abajo, 5 hacia arriba",
+        "diametro": "",
+        "arranque": "Eléctrico"
     }
 ]
