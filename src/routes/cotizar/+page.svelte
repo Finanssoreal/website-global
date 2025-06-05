@@ -19,7 +19,7 @@ async function handleSubmit(event){
     const municipality = formData.get("municipality")?.trim()
     const motorcycle_model = formData.get("motorcycle_model")?.trim()
 
-    /*const phoneRegex = /^[0-9]{8}$/
+    const phoneRegex = /^[0-9]{8}$/
         if (!phoneRegex.test(phone)) {
             alert("Por favor ingrese un número de teléfono válido")
             return
@@ -29,15 +29,16 @@ async function handleSubmit(event){
         if (!emailRegex.test(email)) {
             alert("Por favor ingrese una dirección de correo electrónico válida")
             return
-        }*/
+        }
 
-        /*const cuiRegex = /^[0-9]{13}$/
+        const cuiRegex = /^[0-9]{13}$/
         if (!cuiRegex.test(cui)) {
             alert("Por favor ingrese un código único de identificación válido")
             return
-        }*/
+        }
 
-        const nitRegex = /^[0-9]{9}$/
+        //const nitRegex = /^[0-9]{9}$/
+        const nitRegex = /^$|^[0-9]{9}$/
         if (!nitRegex.test(nit)) {
             alert("Por favor ingrese un número de identificación tributaria válido")
             return
@@ -79,14 +80,14 @@ async function handleSubmit(event){
             <label class="block mb-2 text-sm font-medium">
               Nombres <span class="text-red-500">*</span>
             </label>
-            <input type="text" name="name"  placeholder="Nombres" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
+            <input type="text" name="name" required placeholder="Nombres" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
           </div>
 
           <div>
             <label class="block mb-2 text-sm font-medium">
               Apellidos <span class="text-red-500">*</span>
             </label>
-            <input type="text" name="lastname"  placeholder="Apellidos" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
+            <input type="text" name="lastname" required placeholder="Apellidos" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
           </div>
 
           <!-- Número de celular y Correo -->
@@ -94,14 +95,14 @@ async function handleSubmit(event){
             <label class="block mb-2 text-sm font-medium">
               Número de celular <span class="text-red-500">*</span>
             </label>
-            <input type="tel" name="phone" inputmode="numeric" minlength="8" maxlength="8" placeholder="00000000" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
+            <input type="tel" name="phone" required inputmode="numeric" minlength="8" maxlength="8" placeholder="00000000" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
           </div>
 
           <div>
             <label class="block mb-2 text-sm font-medium">
               Correo electrónico <span class="text-red-500">*</span>
             </label>
-            <input type="email" name="email" placeholder="correo@ejemplo.com" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
+            <input type="email" name="email" required placeholder="correo@ejemplo.com" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
           </div>
 
           <!-- DPI y NIT -->
@@ -109,14 +110,14 @@ async function handleSubmit(event){
             <label class="block mb-2 text-sm font-medium">
               Código Único de Identificación (CUI)
             </label>
-            <input type="text" name="cui" minlength="13" maxlength="13" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
+            <input type="text" name="cui" required minlength="13" maxlength="13" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
           </div>
 
           <div>
             <label class="block mb-2 text-sm font-medium">
               Nro. Identificación Tributaria (NIT)
             </label>
-            <input type="text" name="nit" required minlength="9" maxlength="9" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
+            <input type="text" name="nit" minlength="9" maxlength="9" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
           </div>
 
           <!-- Método de pago y medio de contacto -->
@@ -124,7 +125,7 @@ async function handleSubmit(event){
             <label class="block mb-2 text-sm font-medium">
               Método de pago <span class="text-red-500">*</span>
             </label>
-            <select name="payment_method" class="w-full px-3 py-2 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-gray-400">
+            <select name="payment_method" required class="w-full px-3 py-2 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-gray-400">
               <option value="" selected disabled>Seleccione</option>
               <option value="efectivo">Efectivo</option>
               <option value="financiamiento">Financiamiento</option>
@@ -137,20 +138,12 @@ async function handleSubmit(event){
             <label class="block mb-2 text-sm font-medium">
               ¿Cómo deseas que te contactemos? <span class="text-red-500">*</span>
             </label>
-            <select name="contact_type" class="w-full px-3 py-2 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-gray-400">
+            <select name="contact_type" required class="w-full px-3 py-2 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-gray-400">
               <option value="" selected disabled>Seleccione</option>
               <option value="telefono">Teléfono</option>
               <option value="email">Correo electrónico</option>
               <option value="whatsapp">WhatsApp</option>
             </select>
-            <!--
-            <div class="flex items-center mt-1 text-xs text-red-600 bg-red-100 px-2 py-1 rounded">
-              <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              This field is required.
-            </div>-->
           </div>
 
           <!-- Horario -->
@@ -158,7 +151,7 @@ async function handleSubmit(event){
             <label class="block mb-2 text-sm font-medium">
               ¿En qué horario te gustaría ser contactado? <span class="text-red-500">*</span>
             </label>
-            <select name="contact_hours" class="w-full px-3 py-2 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-gray-400">
+            <select name="contact_hours" required class="w-full px-3 py-2 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-gray-400">
               <option value="" selected disabled>Seleccione</option>
               <option value="mañana">Mañana (8:00 - 12:00)</option>
               <option value="tarde">Tarde (12:00 - 17:00)</option>
@@ -171,7 +164,7 @@ async function handleSubmit(event){
             <label class="block mb-2 text-sm font-medium">
               Departamento <span class="text-red-500">*</span>
             </label>
-            <select name="department" class="w-full px-3 py-2 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-gray-400">
+            <select name="department" required class="w-full px-3 py-2 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-gray-400">
                 <option value="" selected disabled>Seleccione</option>
                 <option value="Alta Verapaz">Alta Verapaz</option>
                 <option value="Baja Verapaz">Baja Verapaz</option>
@@ -203,7 +196,7 @@ async function handleSubmit(event){
             <label class="block mb-2 text-sm font-medium">
               Municipio <span class="text-red-500">*</span>
             </label>
-            <input name="municipality" type="text" placeholder="Ej. Mixco, Cobán, etc." class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
+            <input name="municipality" required type="text" placeholder="Ej. Mixco, Cobán, etc." class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
           </div>
 
 
@@ -211,7 +204,7 @@ async function handleSubmit(event){
             <label class="block mb-2 text-sm font-medium">
               Modelo de motocicleta <span class="text-red-500">*</span>
             </label>
-            <input name="motorcycle_model" type="text" placeholder="Ej. Bajaj Pulsar-NS-200" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
+            <input name="motorcycle_model" required type="text" placeholder="Ej. Bajaj Pulsar-NS-200" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
           </div>
 
           <!-- Botón de envío (colspan 2) -->
