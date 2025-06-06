@@ -62,11 +62,41 @@ async function handleSubmit(event){
         motorcycle_model
 
     })
-}
 
 
+ //  Aquí va la llamada al endpoint que envía el correo
+ const emailResponse = await fetch("/api/send-quotesform-email", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                name,
+                lastname,
+                phone,
+                email,
+                cui,
+                nit,
+                payment_method,
+                contact_type,
+                contact_hours,
+                department,
+                municipality,
+                motorcycle_model
+            }),
+        })
 
+        const emailData = await emailResponse.json()
+        console.log("Respuesta del envío de correo:", emailData)
 
+        if (!emailData.success) {
+            alert("No se pudo enviar el correo. Intenta más tarde.")
+            return
+        }
+
+        alert("Formulario enviado correctamente ")
+
+        form.reset()
+
+    }
 </script>
 
 <section>
