@@ -163,6 +163,7 @@
         <!-- Grid de especificaciones -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {#each especificacionesMotor as item}
+            {#if item.valor !== ""}
                 <div
                     class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-xl transition-shadow duration-300">
                     <img
@@ -174,6 +175,7 @@
                     </h3>
                     <p class="text-gray-600">{item.valor}</p>
                 </div>
+                {/if}
             {/each}
         </div>
     </div>
