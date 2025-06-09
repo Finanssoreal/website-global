@@ -53,11 +53,11 @@ export async function POST({ request, getClientAddress }) {
         text: `
             Nombre: ${name}
             Apellido: ${lastname}
-            Correo: ${email}
+            Correo electrónico: ${email}
             Teléfono: ${phone}
-            cui: ${cui}
-            nit: ${nit}
-            metodo de pago: ${payment_method}
+            CUI: ${cui}
+            NIT: ${nit}
+            Método de pago: ${payment_method}
             Forma de contacto: ${contact_type}
             Horario de contacto: ${contact_hours}
             Departamento: ${department}
@@ -68,6 +68,17 @@ export async function POST({ request, getClientAddress }) {
 `.trim(),
         html: `
     <p><strong>Nombre:</strong> ${name}</p>
+    <p><strong>Apellido:</strong> ${lastname}</p>
+    <p><strong>Correo electrónico:</strong> ${email}</p>
+    <p><strong>Teléfono:</strong> ${phone}</p>
+    <p><strong>CUI:</strong> ${cui}</p>
+    <p><strong>NIT:</strong> ${nit}</p>
+    <p><strong>Método de pago:</strong> ${payment_method}</p>
+    <p><strong>Forma de contacto:</strong> ${contact_type}</p>
+    <p><strong>Horario de contacto:</strong> ${contact_hours}</p>
+    <p><strong>Departamento:</strong> ${department}</p>
+    <p><strong>Municipio:</strong> ${municipality}</p>
+    <p><strong>Modelo de motocicleta:</strong> ${motorcycle_model}</p>
 
 `,
     })

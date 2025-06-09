@@ -138,7 +138,7 @@ async function handleSubmit(event){
           <!-- DPI y NIT -->
           <div>
             <label class="block mb-2 text-sm font-medium">
-              Código Único de Identificación (CUI)
+              Código Único de Identificación (CUI) <span class="text-red-500">*</span>
             </label>
             <input type="text" name="cui" required minlength="13" maxlength="13" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
           </div>
@@ -170,7 +170,7 @@ async function handleSubmit(event){
             </label>
             <select name="contact_type" required class="w-full px-3 py-2 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-gray-400">
               <option value="" selected disabled>Seleccione</option>
-              <option value="telefono">Teléfono</option>
+              <option value="teléfono">Teléfono</option>
               <option value="email">Correo electrónico</option>
               <option value="whatsapp">WhatsApp</option>
             </select>
@@ -183,8 +183,8 @@ async function handleSubmit(event){
             </label>
             <select name="contact_hours" required class="w-full px-3 py-2 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-gray-400">
               <option value="" selected disabled>Seleccione</option>
-              <option value="mañana">Mañana (8:00 - 12:00)</option>
-              <option value="tarde">Tarde (12:00 - 17:00)</option>
+              <option value="mañana (8:00 - 12:00)">Mañana (8:00 - 12:00)</option>
+              <option value="tarde (12:00 - 17:00)">Tarde (12:00 - 17:00)</option>
 
             </select>
           </div>

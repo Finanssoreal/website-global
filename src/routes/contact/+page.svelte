@@ -168,22 +168,9 @@
                         required
                         name="phone"
                         type="tel"
-                        maxlength="15"
+                        minlength="8"
+                        maxlength="8"
                         placeholder="Teléfono"
-                        class="input input-bordered w-full lg:w-48 lg:h-9 bg-transparent text-white border-white placeholder-white" />
-                    <input
-                        required
-                        name="company"
-                        type="text"
-                        maxlength="20"
-                        placeholder="Empresa"
-                        class="input input-bordered w-full lg:w-48 lg:h-9 bg-transparent text-white border-white placeholder-white" />
-                    <input
-                        required
-                        name="position"
-                        type="text"
-                        maxlength="20"
-                        placeholder="Cargo"
                         class="input input-bordered w-full lg:w-48 lg:h-9 bg-transparent text-white border-white placeholder-white" />
 
                     <input
