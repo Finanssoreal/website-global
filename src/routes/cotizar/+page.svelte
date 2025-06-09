@@ -184,7 +184,7 @@ async function handleSubmit(event){
             <select name="contact_hours" required class="w-full px-3 py-2 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-gray-400">
               <option value="" selected disabled>Seleccione</option>
               <option value="mañana (8:00 - 12:00)">Mañana (8:00 - 12:00)</option>
-              <option value="tarde (12:00 - 17:00)">Tarde (12:00 - 17:00)</option>
+              <option value="tarde">Tarde (12:00 - 17:00)</option>
 
             </select>
           </div>

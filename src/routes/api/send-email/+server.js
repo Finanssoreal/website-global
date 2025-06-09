@@ -19,7 +19,7 @@ export async function POST({ request, getClientAddress }) {
         )
     }
 
-    const { name, surname, email, phone, company, position, message } =
+    const { name, surname, email, phone, message } =
         await request.json()
 
     console.log("Datos recibidos:", {
@@ -27,9 +27,7 @@ export async function POST({ request, getClientAddress }) {
         surname,
         email,
         phone,
-        company,
-        position,
-        message,
+        message
     })
 
     if (!name || !email || !message) {
@@ -47,29 +45,25 @@ export async function POST({ request, getClientAddress }) {
     })
 
     const info = await transporter.sendMail({
-        from: `"Formulario Web" <${email}>`,
+        from: `"Formulario de contacto de Global" <${email}>`,
         to: "destinatario@dominio.com",
-        subject: "Nuevo mensaje desde el formulario",
+        subject: "Mensaje de cliente de Global",
         text: `
-Nombre: ${name}
-Apellido: ${surname}
-Correo: ${email}
-Teléfono: ${phone}
-Empresa: ${company}
-Cargo: ${position}
-Mensaje:
-${message}
-`.trim(),
-        html: `
-    <p><strong>Nombre:</strong> ${name}</p>
-    <p><strong>Apellido:</strong> ${surname}</p>
-    <p><strong>Correo:</strong> ${email}</p>
-    <p><strong>Teléfono:</strong> ${phone}</p>
-    <p><strong>Empresa:</strong> ${company}</p>
-    <p><strong>Puesto:</strong> ${position}</p>
-    <p><strong>Mensaje:</strong><br>${message}</p>
-`,
-    })
+            Nombre: ${name}
+            Apellido: ${surname}
+            Correo: ${email}
+            Teléfono: ${phone}
+            Mensaje:
+            ${message}
+            `.trim(),
+                    html: `
+                <p><strong>Nombre:</strong> ${name}</p>
+                <p><strong>Apellido:</strong> ${surname}</p>
+                <p><strong>Correo:</strong> ${email}</p>
+                <p><strong>Teléfono:</strong> ${phone}</p>
+                <p><strong>Mensaje:</strong><br>${message}</p>
+            `,
+                })
 
     console.log(" Correo enviado:", info.messageId)
     // api

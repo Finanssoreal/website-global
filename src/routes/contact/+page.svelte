@@ -6,7 +6,7 @@
         const form = event.target
 
         const token = grecaptcha.getResponse()
-        console.log("Token reCAPTCHA:", token) // Verificar si se obtiene el token
+
 
         if (!token) {
             alert("Por favor completa el reCAPTCHA")
@@ -18,19 +18,9 @@
         const surname = formData.get("surname")?.trim()
         const email = formData.get("email")?.trim()
         const phone = formData.get("phone")?.trim()
-        const company = formData.get("company")?.trim()
-        const position = formData.get("position")?.trim()
         const message = formData.get("message")?.trim()
 
-        console.log(" Formulario:", {
-            name,
-            surname,
-            email,
-            phone,
-            company,
-            position,
-            message,
-        })
+
 
         // Validación básica
         if (
@@ -38,19 +28,28 @@
             !surname ||
             !email ||
             !phone ||
-            !company ||
-            !position ||
             !message
         ) {
             alert("Completa todos los campos")
             return
         }
 
+
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
         if (!emailRegex.test(email)) {
-            alert("Correo no válido")
+            alert("Por favor ingrese una dirección de correo electrónico válida")
             return
         }
+
+        const phoneRegex = /^[0-9]{8}$/
+        if (!phoneRegex.test(phone)) {
+            alert("Por favor ingrese un número de teléfono válido")
+            return
+        }
+
+
+
+
 
         const res = await fetch("/api/verify-recaptcha", {
             method: "POST",
@@ -59,7 +58,7 @@
         })
 
         const data = await res.json()
-        console.log("Respuesta del backend:", data) // Verificar respuesta del backend
+
 
         if (!data.success) {
             alert("Verificación reCAPTCHA fallida")
@@ -76,24 +75,12 @@
                 surname,
                 email,
                 phone,
-                company,
-                position,
-                message,
+                message
             }),
         })
-        console.log(
-            "datos del formulario:",
-            { name },
-            { surname },
-            { email },
-            { phone },
-            { company },
-            { position },
-            { message },
-        )
+
 
         const emailData = await emailResponse.json()
-        console.log("Respuesta del envío de correo:", emailData)
 
         if (!emailData.success) {
             alert("No se pudo enviar el correo. Intenta más tarde.")
@@ -147,21 +134,21 @@
                         required
                         name="name"
                         type="text"
-                        maxlength="20"
+                        maxlength="100"
                         placeholder="Nombre"
                         class="input input-bordered w-full lg:w-48 lg:h-9 bg-transparent text-white border-white placeholder-white" />
                     <input
                         required
                         name="surname"
                         type="text"
-                        maxlength="20"
+                        maxlength="100"
                         placeholder="Apellidos"
                         class="input input-bordered w-full lg:w-48 lg:h-9 bg-transparent text-white border-white placeholder-white" />
                     <input
                         required
                         name="email"
                         type="email"
-                        maxlength="20"
+                        maxlength="100"
                         placeholder="Email"
                         class="input input-bordered w-full lg:w-48 lg:h-9 bg-transparent text-white border-white placeholder-white" />
                     <input
