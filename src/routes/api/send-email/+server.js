@@ -12,7 +12,7 @@ import { isRateLimited } from "$lib/rate-limiter"
 export async function POST({ request, getClientAddress }) {
     const ip = getClientAddress()
     if (isRateLimited(ip)) {
-        console.warn(`IP bloqueada temporalmente por rate limit: ${ip}`)
+        //console.warn(`IP bloqueada temporalmente por rate limit: ${ip}`)
         return json(
             { error: "Demasiadas solicitudes. Intenta más tarde." },
             { status: 429 },
@@ -22,16 +22,9 @@ export async function POST({ request, getClientAddress }) {
     const { name, surname, email, phone, message } =
         await request.json()
 
-    console.log("Datos recibidos:", {
-        name,
-        surname,
-        email,
-        phone,
-        message
-    })
+
 
     if (!name || !email || !message) {
-        console.warn("Faltan campos requeridos")
         return json({ error: "Campos requeridos faltantes" }, { status: 400 })
     }
 
@@ -64,8 +57,6 @@ export async function POST({ request, getClientAddress }) {
                 <p><strong>Mensaje:</strong><br>${message}</p>
             `,
                 })
-
-    console.log(" Correo enviado:", info.messageId)
     // api
     return json({ success: true })
 }

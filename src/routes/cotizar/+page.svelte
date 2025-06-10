@@ -45,25 +45,6 @@ async function handleSubmit(event){
         }
 
 
-
-    console.log("Los datos enviados son: \n",
-    {
-        name,
-        lastname,
-        phone,
-        email,
-        cui,
-        nit,
-        payment_method,
-        contact_type,
-        contact_hours,
-        department,
-        municipality,
-        motorcycle_model
-
-    })
-
-
  //  Aquí va la llamada al endpoint que envía el correo
  const emailResponse = await fetch("/api/send-quotesform-email", {
             method: "POST",
@@ -85,7 +66,6 @@ async function handleSubmit(event){
         })
 
         const emailData = await emailResponse.json()
-        console.log("Respuesta del envío de correo:", emailData)
 
         if (!emailData.success) {
             alert("No se pudo enviar el correo. Intenta más tarde.")

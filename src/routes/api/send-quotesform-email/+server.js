@@ -12,7 +12,7 @@ import { isRateLimited } from "$lib/rate-limiter"
 export async function POST({ request, getClientAddress }) {
     const ip = getClientAddress()
     if (isRateLimited(ip)) {
-        console.warn(`IP bloqueada temporalmente por rate limit: ${ip}`)
+        //console.warn(`IP bloqueada temporalmente por rate limit: ${ip}`)
         return json(
             { error: "Demasiadas solicitudes. Intenta más tarde." },
             { status: 429 },
@@ -22,20 +22,6 @@ export async function POST({ request, getClientAddress }) {
     const { name, lastname, phone, email, cui, nit, payment_method,contact_type,
         contact_hours,department,municipality,motorcycle_model } = await request.json()
 
-   /* console.log("Datos recibidos:", {
-        name,
-        surname,
-        email,
-        phone,
-        company,
-        position,
-        message,
-    })*/
-
-   /* if (!name || !email || !message) {
-        console.warn("Faltan campos requeridos")
-        return json({ error: "Campos requeridos faltantes" }, { status: 400 })
-    }*/
 
     const transporter = nodemailer.createTransport({
         host: MAILTRAP_HOST,
@@ -83,7 +69,6 @@ export async function POST({ request, getClientAddress }) {
 `,
     })
 
-    console.log(" Correo enviado:", info.messageId)
     // api
     return json({ success: true })
 }
