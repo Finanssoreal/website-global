@@ -1,52 +1,14 @@
 <script>
     import ProductCard from "$lib/components/Card.svelte"
     import products from "$lib/data/destacadas.json"
-    let audio
-    let reproduciendo = false
 
-    function toggleAudio() {
-        if (!audio) return
-        if (reproduciendo) {
-            audio.pause()
-        } else {
-            audio.play()
-        }
-        reproduciendo = !reproduciendo
-    }
 </script>
 
 <section>
-    <div class="w-full h-75 sm:h-100 md:h-125 bg-primary">
-        <button
-            on:click={toggleAudio}
-            class=" text-black text-xl hover:text-red-500 transition duration-200 ml-12 text-none mt-0 sm:mt-3"
-            aria-label="Reproducir o pausar sonido">
-            {#if reproduciendo}
-                <i class="fa-solid fa-volume-xmark"></i>
-            {:else}
-                <i class="fa-solid fa-volume-low"></i>
-            {/if}
-        </button>
+    <div class="w-full h-75 sm:h-100 md:h-125 bg-amber-300 bg-cover bg-center"
+    style="background-image: url('images/Inicio/FONDO-BANNER-INICIO.png');">
 
-        <!-- Audio oculto -->
-        <audio bind:this={audio}>
-            <source src="/audio/Sonido-moto.mp3" type="audio/mpeg" />
-        </audio>
-        <div class="flex items-center justify-center w-full">
-            <div class="flex flex-col items-center justify-center">
-                <h1
-                    class="text-[80px] sm:text-[130px] md:text-[170px] lg:text-[200px] font-extrabold text-success/30 text-center text-none">
-                    GLOBAL
-                </h1>
-                <div
-                    class="h-100 w-80 md:w-180 relative items-center justify-center flex">
-                    <img
-                        src="/images/Inicio/moto.png"
-                        alt="Foto izquierda"
-                        class="absolute h-50 w-auto sm:h-60 sm:w-100 sm:bottom-65 md:h-80 md:w-140 bottom-65 md:bottom-60" />
-                </div>
-            </div>
-        </div>
+
     </div>
 </section>
 
@@ -80,12 +42,12 @@
         </div>
     </div>
 </section>
-
+<!--bg-primary-->
 <section>
-    <div class="flex flex-col bg-primary">
+    <div class="flex flex-col" style="background-color: #000000;">
         <div class="flex flex-row w-full justify-center mt-5">
             <p
-                class="text-black font-bold text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+                class="text-white font-bold text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                 Nuestras marcas
             </p>
         </div>
@@ -94,11 +56,11 @@ h-40 w-40 sm:h-60 sm:w-60 md:h-80 md:w-80 lg:h-100 lg:w-100 xl:h-120 xl:w-120-->
         <div class="flex flex-row w-full justify-around mt-5">
             <div
                 class="xl:h-28 xl:w-100 lg:h-25 lg:w-80 md:h-20 md:w-70 sm:h-20 sm:w-60 h-15 w-40">
-                <img src="images/Inicio/logo-suzuki.png" alt="Suzuki" />
+                <img src="images/Inicio/SUZUKI-LOGO-BLANCO.gif" alt="Suzuki" />
             </div>
             <div
                 class="xl:h-28 xl:w-100 lg:h-25 lg:w-80 md:h-20 md:w-70 sm:h-20 sm:w-60 h-15 w-40">
-                <img src="images/Inicio/logo-bajaj.png" alt="Bajaj" />
+                <img src="images/Inicio/BAJAJ-LOGO-BLANCO.gif" alt="Bajaj" />
             </div>
         </div>
     </div>
@@ -128,7 +90,7 @@ h-40 w-40 sm:h-60 sm:w-60 md:h-80 md:w-80 lg:h-100 lg:w-100 xl:h-120 xl:w-120-->
     <div class="flex flex-row w-full justify-center mt-15 mb-5">
         <a
             href="/catalog"
-            class="text-white bg-black text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl border p-1.5 md:p-3 rounded-4xl p-2">
+            class="text-white text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl border p-1.5 md:p-3 rounded-4xl p-2" style="background-color:#fe0606;">
             Ver Catálogo
         </a>
     </div>
