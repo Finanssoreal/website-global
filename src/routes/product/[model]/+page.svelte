@@ -157,7 +157,7 @@
             <h2 class="text-3xl font-bold text-gray-900">
                 ESPECIFICACIONES DEL MOTOR
             </h2>
-            <div class="w-auto md:w-100 h-1 bg-red-500 mx-auto mt-2"></div>
+            <div class="w-auto md:w-100 h-1  mx-auto mt-2" style="background-color: #1b3984;"></div>
         </div>
 
         <!-- Grid de especificaciones -->

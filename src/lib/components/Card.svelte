@@ -9,7 +9,7 @@
 <a href={`/product/${model}`}>
 <div
     class="flex flex-col bg-white shadow-xl rounded-lg p-3 w-60 transition hover:scale-110">
-    <p class="text-lg font-bold">{brand}</p>
+    <p class="text-lg font-bold" style="color:#1b3984;">{brand}</p>
 
     <div class="flex flex-row justify-center ">
         <div class=" h-40 w-50 flex items-center justify-center">
