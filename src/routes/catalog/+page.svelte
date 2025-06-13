@@ -37,22 +37,20 @@
 </script>
 
 <section>
-    <div class="w-full h-70 sm:h-100 md:h-118 bg-primary">
-        <div class="flex items-center justify-center w-full">
-            <div class="flex flex-col items-center justify-center">
-                <h1
-                    class="text-[80px] sm:text-[130px] md:text-[170px] lg:text-[200px] font-extrabold text-success/30 text-center">
-                    GLOBAL
-                </h1>
-                <div
-                    class="h-100 w-80 md:w-180 relative items-center justify-center flex">
-                    <img
-                        src="/images/Inicio/moto.png"
-                        alt="Foto izquierda"
-                        class="absolute h-50 w-auto sm:h-60 sm:w-100 sm:bottom-65 md:h-80 md:w-140 bottom-65 md:bottom-60" />
-                </div>
-            </div>
+    <div class="w-full h-75 sm:h-100 md:h-125 bg-amber-300 bg-cover bg-center grid xl:grid-cols-2 xl:pl-6 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2  place-items-center  "
+    style="background-image: url('images/Banner-Catalog/FONDO-BANNER.png');" >
+
+        <!--Contenedor moto  bg-amber-500 -->
+        <div class=" xl:h-93 xl:w-140 xl:mt-20 xl:order-1   lg:h-80 lg:w-120 lg:mt-25 lg:order-1    md:h-60 md:w-90 md:mt-20 md:order-1    sm:h-46 sm:w-75 sm:mt-15 sm:ml-1 sm:order-1   h-30 w-50 mb-12 mt-5   order-2">
+            <img src="images/Banner-Catalog/MOTOCICLETAS.png" alt="Motocicleta ">
         </div>
+
+         <!--Contenedor mensaje  bg-blue-700-->
+         <div class=" xl:h-43 xl:w-130 xl:mb-10 xl:ml-10 xl:order-2   lg:h-37 lg:w-105 lg:mb-6 lg:ml-10 lg:order-2   md:h-30 md:w-80 md:mb-5 md:ml-6 md:order-2   sm:h-17 sm:w-65 sm:mb-11 sm:ml-3 sm:order-2   h-17 w-65 mt-10 ml-0 order-1 ">
+            <img src="images/Banner-Catalog/Texto.png" alt="Texto">
+            <img src="images/Banner-Catalog/LOGOS.png" alt="Logos" class="mt-5">
+         </div>
+
     </div>
 </section>
 
