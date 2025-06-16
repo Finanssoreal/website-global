@@ -45,10 +45,14 @@
             <img src="images/Banner-Catalog/MOTOCICLETAS.png" alt="Motocicleta ">
         </div>
 
-         <!--Contenedor mensaje  bg-blue-700-->
+         <!--Contenedor mensaje  bg-blue-700    bg-amber-300-->
          <div class=" xl:h-43 xl:w-130 xl:mb-10 xl:ml-10 xl:order-2   lg:h-37 lg:w-105 lg:mb-6 lg:ml-10 lg:order-2   md:h-30 md:w-80 md:mb-5 md:ml-6 md:order-2   sm:h-17 sm:w-65 sm:mb-11 sm:ml-3 sm:order-2   h-17 w-65 mt-10 ml-0 order-1 ">
+
             <img src="images/Banner-Catalog/Texto.png" alt="Texto">
-            <img src="images/Banner-Catalog/LOGOS.png" alt="Logos" class="mt-5">
+
+            <div class=" flex flex-row w-full pt-2 pl-8 pr-8   xl:pl-20 xl:pr-20 xl:pt-7   lg:pl-15 lg:pr-15 lg:pt-7  md:pl-10 md:pr-10 md:pt-5  sm:pl-6 sm:pr-6 sm:pt-5">
+            <img src="images/Banner-Catalog/LOGOS.png" alt="Logos">
+            </div>
          </div>
 
     </div>

@@ -54,10 +54,10 @@ const dispatch = createEventDispatcher();
 
 
 <form on:submit={applyFilters} class="bg-white shadow-md rounded-md p-6 w-72 font-sans text-gray-900 mt-20 ml-5">
-    <h2 class="font-extrabold text-lg mb-4">Filtros</h2>
+    <h2 class="font-extrabold text-lg mb-4 text-white">Filtros</h2>
 
     <div class="mb-6">
-      <label class="block mb-1 font-semibold text-base cursor-pointer">Marca</label>
+      <label class="block mb-1 font-semibold text-base cursor-pointer text-white">Marca</label>
       <select bind:value={selectedBrand} class="select select-bordered w-full text-sm text-gray-700">
         <option disabled selected>Seleccione una marca</option>
         <option>Suzuki</option>
@@ -68,7 +68,7 @@ const dispatch = createEventDispatcher();
     </div>
 
     <div class="mb-6">
-      <p class="font-semibold text-base mb-3">Precio</p>
+      <p class="font-semibold text-base mb-3 text-white">Precio</p>
       <div class="flex justify-between mb-3">
         <div class="w-1/2 pr-2">
           <label class="block text-xs text-gray-700 mb-1">Mín</label>
