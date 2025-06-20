@@ -4,9 +4,11 @@
 
 </script>
 
+<!--bg-contain bg-cover-->
+
 <section>
     <div class="w-full h-75 sm:h-100 md:h-125 bg-cover bg-center grid xl:grid-cols-2 xl:pl-6 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2  place-items-center  "
-    style="background-image: url('images/Inicio/FONDO-BANNER-INICIO.png');" >
+    style="background-image: url('images/Inicio/FONDO-INICIO-BANNER.png');" >
 
         <!--Contenedor moto  bg-amber-500 -->
         <div class=" xl:h-90 xl:w-160 xl:mt-20 xl:order-1   lg:h-80 lg:w-140 lg:mt-25 lg:order-1    md:h-57 md:w-100 md:mt-20 md:order-1    sm:h-46 sm:w-80 sm:mt-15 sm:order-1   h-40 w-70 mb-12   order-2">
@@ -20,6 +22,7 @@
 
     </div>
 </section>
+
 
 <section>
     <div

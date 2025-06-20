@@ -31,15 +31,25 @@
 }
 
 
-
-
-
 </script>
 
-<section>
-    <div class="w-full h-75 sm:h-100 md:h-125 bg-cover bg-center grid xl:grid-cols-2 xl:pl-6 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2  place-items-center  "
-    style="background-image: url('images/Banner-Catalog/FONDO-BANNER.png');" >
 
+
+<!--style="background-image: url('images/Banner-Catalog/FONDO-BANNER.png');"   bg-amber-800
+
+
+    <div class="w-full 2xl:h-12 xl:h-10 lg:h-8 md:h-6 sm:h-4 h-2 flex flex-row ">
+        <img src="images/Banner-Catalog/FRANJAS-ARRIBA.png" alt="Franjas">
+    </div>
+
+-->
+
+<section>
+
+
+
+    <div class="w-full h-75 sm:h-100 md:h-125 bg-cover bg-center grid xl:grid-cols-2 xl:pl-6 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2  place-items-center  "
+    style="background-image: url('images/Banner-Catalog/FONDO-CATALOGO-BANNER.png');" >
         <!--Contenedor moto  bg-amber-500 -->
         <div class=" xl:h-93 xl:w-140 xl:mt-20 xl:order-1   lg:h-80 lg:w-120 lg:mt-25 lg:order-1    md:h-60 md:w-90 md:mt-20 md:order-1    sm:h-46 sm:w-75 sm:mt-15 sm:ml-1 sm:order-1   h-30 w-50 mb-12 mt-5   order-2">
             <img src="images/Banner-Catalog/MOTOCICLETAS.png" alt="Motocicleta ">
@@ -56,6 +66,7 @@
          </div>
 
     </div>
+
 </section>
 
    <!-- Botón solo visible en pantallas pequeñas -->
