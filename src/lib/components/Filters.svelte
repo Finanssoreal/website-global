@@ -53,12 +53,12 @@ const dispatch = createEventDispatcher();
 </script>
 
 
-<form on:submit={applyFilters} class="bg-white shadow-md rounded-md p-6 w-72 font-sans text-gray-900 mt-20 ml-5">
+<form on:submit={applyFilters} class="bg-black shadow-md rounded-md p-6 w-72 font-sans text-gray-900 mt-20 ml-5">
     <h2 class="font-extrabold text-lg mb-4 text-white">Filtros</h2>
 
     <div class="mb-6">
       <label class="block mb-1 font-semibold text-base cursor-pointer text-white">Marca</label>
-      <select bind:value={selectedBrand} class="select select-bordered w-full text-sm text-gray-700">
+      <select bind:value={selectedBrand} class="select select-bordered w-full text-sm text-white" style="background-color:#fe0606;">
         <option disabled selected>Seleccione una marca</option>
         <option>Suzuki</option>
         <option>Bajaj</option>
@@ -70,20 +70,26 @@ const dispatch = createEventDispatcher();
     <div class="mb-6">
       <p class="font-semibold text-base mb-3 text-white">Precio</p>
       <div class="flex justify-between mb-3">
+
+
         <div class="w-1/2 pr-2">
-          <label class="block text-xs text-gray-700 mb-1">Mín</label>
+          <label class="block text-xs text-white mb-1">Mín</label>
           <input
             type="text"
-            class="input input-bordered w-full input-xs text-gray-400"
+            class="input input-bordered w-full input-xs text-white"
+            style="background-color:#fe0606;"
             readonly
             bind:value={minDisplay}
           />
         </div>
+
+
         <div class="w-1/2 pl-2">
-          <label class="block text-xs text-gray-700 mb-1">Máx</label>
+          <label class="block text-xs text-white mb-1">Máx</label>
           <input
             type="text"
-            class="input input-bordered w-full input-xs text-gray-400"
+            class="input input-bordered w-full input-xs text-white"
+            style="background-color:#fe0606;"
             readonly
             bind:value={maxDisplay}
           />
@@ -93,10 +99,11 @@ const dispatch = createEventDispatcher();
       <div class="relative h-6 mb-6">
 
         <div
-          class="absolute h-1 bg-black rounded-full top-1/2 transform -translate-y-1/2 z-0"
+          class="absolute h-1 bg-white rounded-full top-1/2 transform -translate-y-1/2 z-0"
           style="left: {leftPercent}%; width: {widthPercent}%"
         ></div>
 
+        <!--[&::-webkit-slider-thumb]:bg-black-->
 
         <input
           type="range"
@@ -105,8 +112,9 @@ const dispatch = createEventDispatcher();
           step="100"
           bind:value={rangeMin}
           on:input={handleMinChange}
-          class="absolute w-full h-1 appearance-none bg-transparent pointer-events-none top-1/2 transform -translate-y-1/2 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-black [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:shadow [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-black [&::-moz-range-thumb]:pointer-events-auto"
-        />
+          class="absolute w-full h-1 appearance-none bg-transparent pointer-events-none top-1/2 transform -translate-y-1/2 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:rounded-full       [&::-webkit-slider-thumb]:bg-[var(--thumb-color)]         [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:shadow [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-black [&::-moz-range-thumb]:pointer-events-auto"
+         style="--thumb-color: #fe0606;"
+          />
 
 
         <input
@@ -116,8 +124,10 @@ const dispatch = createEventDispatcher();
           step="100"
           bind:value={rangeMax}
           on:input={handleMaxChange}
-          class="absolute w-full h-1 appearance-none bg-transparent pointer-events-none top-1/2 transform -translate-y-1/2 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-black [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:shadow [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-black [&::-moz-range-thumb]:pointer-events-auto"
-        />
+          class="absolute w-full h-1 appearance-none bg-transparent pointer-events-none top-1/2 transform -translate-y-1/2 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[var(--thumb-color)] [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:shadow [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-black [&::-moz-range-thumb]:pointer-events-auto"
+          style="--thumb-color: #fe0606;"
+
+          />
       </div>
     </div>
 
@@ -133,7 +143,7 @@ const dispatch = createEventDispatcher();
     </div>
     -->
 
-    <button type="submit" class="btn btn-neutral bg-black btn-block rounded-full text-sm shadow-lg">
+    <button type="submit" class="btn btn-neutral bg-white text-black btn-block rounded-full text-sm shadow-lg">
       Filtrar
     </button>
   </form>

@@ -389,5 +389,31 @@
         "caja": "Manual de 6 velocidades (1 hacia abajo, 5 hacia arriba",
         "diametro": "",
         "arranque": "Eléctrico"
+    },
+    {
+        "brand": "Bajaj",
+        "model": "AVENGER 160 STREET",
+        "description": "La Bajaj Avenger 160 Street es la compañera ideal para quienes buscan estilo y libertad en cada recorrido. Con un diseño urbano y una postura relajada, ofrece una experiencia de conducción cómoda y con actitud. Perfecta para moverse por la ciudad con personalidad, combina elegancia, fuerza y una esencia cruiser que marca la diferencia en cada calle.",
+        "label_promotion": "Precio de promoción",
+        "price": "Q 15,999.00",
+        "description2": "",
+        "imageSrc": "/images/Bajaj/AVENGER-160-STREET.png",
+        "alt": "Motocicleta Bajaj AVENGER 160 STREET",
+        "colorVariants": [
+
+        ],
+        "motor": "4 tiempos, DTSi",
+        "power": "15 Hp @ 8500 rpm",
+        "piston": "160 CC",
+        "fuel": "3.43 Galones",
+        "motor2": "4 tiempos, DTSi",
+        "cilindraje": "160 CC",
+        "potencia": "15 Hp @ 8500 rpm",
+        "torque": "13.5 Nm @ 7000 rpm",
+        "embrague": "",
+        "alimentacion": "",
+        "caja": "",
+        "diametro": "",
+        "arranque": "Eléctrico"
     }
 ]

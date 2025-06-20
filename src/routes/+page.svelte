@@ -5,7 +5,7 @@
 </script>
 
 <section>
-    <div class="w-full h-75 sm:h-100 md:h-125 bg-amber-300 bg-cover bg-center grid xl:grid-cols-2 xl:pl-6 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2  place-items-center  "
+    <div class="w-full h-75 sm:h-100 md:h-125 bg-cover bg-center grid xl:grid-cols-2 xl:pl-6 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2  place-items-center  "
     style="background-image: url('images/Inicio/FONDO-BANNER-INICIO.png');" >
 
         <!--Contenedor moto  bg-amber-500 -->
