@@ -1,8 +1,32 @@
 
 <script>
+    import { PUBLIC_RECAPTCHA_SITE_KEY } from "$env/static/public"
 async function handleSubmit(event){
     event.preventDefault()
     const form = event.target
+
+    const token = grecaptcha.getResponse()
+
+
+        if (!token) {
+            alert("Por favor completa el reCAPTCHA")
+            return
+        }
+
+        const res = await fetch("/api/verify-recaptcha", {
+            method: "POST",
+            body: JSON.stringify({ token }),
+            headers: { "Content-Type": "application/json" },
+        })
+
+        const data = await res.json()
+
+
+        if (!data.success) {
+            alert("Verificación reCAPTCHA fallida")
+            grecaptcha.reset()
+            return
+        }
 
     const formData = new FormData(form)
 
@@ -79,8 +103,12 @@ async function handleSubmit(event){
     }
 </script>
 
+<svelte:head>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</svelte:head>
+
 <section>
-    <div class=" w-full flex justify-center">
+    <div class=" w-full flex justify-center select-none">
       <div class="w-full max-w-4xl px-6 py-12">
         <h1 class="text-2xl font-bold text-center mb-8">¡Déjanos tus datos!</h1>
 
@@ -217,6 +245,13 @@ async function handleSubmit(event){
             <input name="motorcycle_model" required type="text" placeholder="Ej. Bajaj Pulsar-NS-200" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
           </div>
 
+
+          <div class="col-span-2 flex justify-center">
+            <div
+                class="g-recaptcha"
+                data-sitekey={PUBLIC_RECAPTCHA_SITE_KEY}>
+            </div>
+        </div>
           <!-- Botón de envío (colspan 2) -->
           <div class="md:col-span-2 flex justify-center mt-8">
             <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-16 rounded">
