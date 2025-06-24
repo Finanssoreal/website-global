@@ -53,7 +53,7 @@ const dispatch = createEventDispatcher();
 </script>
 
 
-<form on:submit={applyFilters} class="bg-black shadow-md rounded-md p-6 w-72 font-sans text-gray-900 mt-20 ml-5">
+<form on:submit={applyFilters} class="bg-black shadow-md rounded-md p-6 w-72 font-sans text-gray-900 mt-20 ml-5 select-none">
     <h2 class="font-extrabold text-lg mb-4 text-white">Filtros</h2>
 
     <div class="mb-6">
@@ -84,7 +84,7 @@ const dispatch = createEventDispatcher();
         </div>
 
 
-        <div class="w-1/2 pl-2">
+        <div class="w-1/2 pl-2 ">
           <label class="block text-xs text-white mb-1">Máx</label>
           <input
             type="text"

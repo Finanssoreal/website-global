@@ -140,10 +140,10 @@
                 0
                     ? 'border-l border-gray-300'
                     : ''}">
-                <h3 class="font-bold">{titulo}</h3>
-                <p>{valor}</p>
+                <h3 class="font-bold select-none">{titulo}</h3>
+                <p class="select-none">{valor}</p>
                 <div class="relative items-center justify-center flex mt-4 p-3">
-                    <img src={imagen} {alt} class="absolute h-10 w-auto" />
+                    <img src={imagen} {alt} class="absolute h-10 w-auto select-none" />
                 </div>
             </div>
         {/each}
@@ -154,7 +154,7 @@
     <div class="max-w-4xl w-full px-6 py-12">
         <!-- Título principal -->
         <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-gray-900">
+            <h2 class="text-3xl font-bold text-gray-900 select-none">
                 ESPECIFICACIONES DEL MOTOR
             </h2>
             <div class="w-auto md:w-100 h-1  mx-auto mt-2" style="background-color: #1b3984;"></div>
@@ -165,7 +165,7 @@
             {#each especificacionesMotor as item}
             {#if item.valor !== ""}
                 <div
-                    class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-xl transition-shadow duration-300">
+                    class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-xl transition-shadow duration-300 select-none">
                     <img
                         src={item.imagen}
                         alt={item.alt}

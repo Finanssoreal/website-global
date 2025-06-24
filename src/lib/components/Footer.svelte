@@ -1,7 +1,7 @@
 <section>
     <div
   id="contenedor_imagen"
-  class="relative flex flex-col h-100 bg-cover bg-center"
+  class="relative flex flex-col h-100 bg-cover bg-center select-none"
   style="background-image: url('/images/footer/motofooter.jpg');"
 >
   <!-- Capa que oscurece la imagen -->

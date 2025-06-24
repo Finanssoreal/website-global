@@ -99,7 +99,7 @@
 
 <!-- section one -->
 <section>
-    <div class="w-full h-70 sm:h-100 md:h-118 bg-primary">
+    <div class="w-full h-70 sm:h-100 md:h-118 bg-primary select-none">
         <div class="flex items-center justify-center w-full">
             <div class="flex flex-col items-center justify-center">
                 <h1
@@ -121,7 +121,7 @@
 <!-- section two -->
 <section class=" ">
     <div
-        class=" bg-[url('/images/Contact/motocontact.webp')] bg-cover bg-center">
+        class=" bg-[url('/images/Contact/motocontact.webp')] bg-cover bg-center select-none">
         <div class="w-full h-full bg-black/80 p-10">
             <h1 class=" text-white text-3xl lg:text-5xl font-black text-center">
                 Conversemos

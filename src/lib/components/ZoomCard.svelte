@@ -37,12 +37,12 @@
         <div class="">
             <h1 class="text-xl select-none md:text-3xl text-left">{titulo}</h1>
 
-            <p class="text-base md:text-lg font-medium mb-4">
+            <p class="text-base select-none md:text-lg font-medium mb-4">
                 {descripcion}
             </p>
 
-            <strong class="text-left text-xl md:text-2x">{subtitulo}</strong>
-            <p class="text-left text-base md:text-xl font-black mt-2">
+            <strong class="text-left select-none text-xl md:text-2x">{subtitulo}</strong>
+            <p class="text-left select-none text-base md:text-xl font-black mt-2">
                 {precio}
             </p>
 
@@ -53,12 +53,12 @@
                 </a>
             {/each}
 
-            <p class="text-base md:text-lg font-medium mt-5">
+            <p class="text-base md:text-lg select-none font-medium mt-5">
                 {parrafoInferior}
             </p>
 
 
-                <p class="text-xl mt-5">Colores Disponibles</p>
+                <p class="text-xl select-none mt-5">Colores Disponibles</p>
 
             <div class=" w-full grid grid-cols-2 pr-20 sm:grid-cols-4 md:grid-cols-5 md:pr-10 lg:grid-cols-3 lg:pr-28 xl:grid-cols-4 xl:pr-20 gap-2">
 
