@@ -1,9 +1,8 @@
 import nodemailer from "nodemailer"
 import {
-    MAILTRAP_HOST,
-    MAILTRAP_PORT,
-    MAILTRAP_USER,
-    MAILTRAP_PASS,
+    GMAIL_USER,
+    GMAIL_APP_PASSWORD,
+    RECIPIENT_EMAIL,
 } from "$env/static/private"
 import { json } from "@sveltejs/kit"
 import { isRateLimited } from "$lib/rate-limiter"
@@ -23,18 +22,18 @@ export async function POST({ request, getClientAddress }) {
         contact_hours,department,municipality,motorcycle_model } = await request.json()
 
 
-    const transporter = nodemailer.createTransport({
-        host: MAILTRAP_HOST,
-        port: parseInt(MAILTRAP_PORT),
-        auth: {
-            user: MAILTRAP_USER,
-            pass: MAILTRAP_PASS,
-        },
-    })
+        const transporter = nodemailer.createTransport({
+            service: "gmail",
+            auth: {
+                user: GMAIL_USER,
+                pass: GMAIL_APP_PASSWORD,
+            },
+        })
 
     const info = await transporter.sendMail({
-        from: `"Formulario Web" <${email}>`,
-        to: "destinatario@dominio.com",
+        from: `"Formulario de cotizaciones" <${GMAIL_USER}>`,
+        to: `${RECIPIENT_EMAIL}`,
+        replyTo: email,
         subject: "Cotización de motocicleta",
         text: `
             Nombre: ${name}
