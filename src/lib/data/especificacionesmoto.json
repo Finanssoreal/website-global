@@ -1,7 +1,7 @@
 [
     {
         "brand": "Suzuki",
-        "model": "AX-100",
+        "model": "AX100",
         "description": "Para el trabajo duro, sumamente confiable, robusta y sobre todo muy potente. Es la motocicleta de Suzuki ideal para los nuevos proyectos y la que mejor se adapta para el trabajo duro.",
         "label_promotion": "Precio de promoción",
         "price": "Q 9,900.00",
@@ -29,7 +29,7 @@
     },
     {
         "brand": "Suzuki",
-        "model": "AX-4",
+        "model": "AX4",
         "description": "La Suzuki AX4 es una motocicleta utilitaria diseñada para el trabajo diario. Su motor de 4 tiempos y 113 cc ofrece un equilibrio perfecto entre rendimiento y economía de combustible, alcanzando hasta 58 km/l. Con un diseño robusto y componentes duraderos, es ideal para entregas y desplazamientos urbanos.",
         "label_promotion": "Precio de promoción",
         "price": "Q 11,875.00",
@@ -59,7 +59,7 @@
     },
     {
         "brand": "Suzuki",
-        "model": "GIXXER-DF155",
+        "model": "GIXXER DF155",
         "description": "La Suzuki GIXXER DF155 es una motocicleta deportiva tipo naked que combina potencia, estilo y eficiencia. Equipada con un motor de 155 cc y 4 tiempos, ofrece una experiencia de conducción ágil y dinámica, ideal para desplazamientos urbanos y aventuras en carretera.",
         "label_promotion": "Precio de promoción",
         "price": "Q 21,899.00",
@@ -87,7 +87,7 @@
     },
     {
         "brand": "Suzuki",
-        "model": "GIXXER-SF250",
+        "model": "GIXXER SF250",
         "description": "La Suzuki GIXXER SF250 es una motocicleta deportiva carenada que combina diseño aerodinámico y tecnología avanzada. Equipada con un motor de 250 cc y refrigeración por aceite, ofrece un rendimiento óptimo tanto en ciudad como en carretera.",
         "label_promotion": "Precio de promoción",
         "price": "Q 37,490.00",
@@ -114,7 +114,7 @@
     },
     {
         "brand": "Suzuki",
-        "model": "GN-125F",
+        "model": "GN125F",
         "description": "La Suzuki GN125F es una motocicleta tipo custom reconocida por su fiabilidad y bajo costo de mantenimiento. Equipada con un motor de 125 cc y 4 tiempos, ofrece un rendimiento óptimo para el uso diario y desplazamientos urbanos.",
         "label_promotion": "Precio de promoción",
         "price": "Q 15,740.00",
@@ -143,7 +143,7 @@
     },
     {
         "brand": "Suzuki",
-        "model": "GN125-TT",
+        "model": "GN125 TT",
         "description": "La Suzuki GN125-TT es una motocicleta versátil y resistente, ideal para el trabajo diario y desplazamientos urbanos. Equipada con un motor de 125 cc y 4 tiempos, ofrece un equilibrio perfecto entre rendimiento y economía de combustible.",
         "label_promotion": "Precio de promoción",
         "price": "Q 13,617.00",
@@ -172,7 +172,7 @@
     },
     {
         "brand": "Bajaj",
-        "model": "BOXER-100",
+        "model": "BOXER 100",
         "description": "Boxer significa fuerza, resistencia, robustez y durabilidad. Una motocicleta que puede tomar cualquier calle del mundo. Una de las motocicletas de mayor preferencia en más de 30 países. Conocida por su confiabilidad, la Boxer es ampliamente utilizada como mototaxi. Es la motocicleta que siempre se mantiene firme e infunde una sensación de seguridad y garantía.",
         "label_promotion": "Precio de promoción",
         "price": "Q 8,999",
@@ -196,7 +196,7 @@
     },
     {
         "brand": "Bajaj",
-        "model": "BOXER-150",
+        "model": "BOXER 150",
         "description": "Una motocicleta que se mantiene fuerte y acepta toda carga con facilidad. Boxer 150 es una gran combinación de potencia y eficiencia de combustible, convirtiéndola en la motocicleta ideal para viajar en la ciudad y diferentes terrenos.",
         "label_promotion": "Precio de promoción",
         "price": "Q 11,499.00",
@@ -225,7 +225,7 @@
     },
     {
         "brand": "Bajaj",
-        "model": "DISCOVER-125-ST",
+        "model": "DISCOVER 125 ST",
         "description": "La moto más esperada de Discover vuelve para que te goces la vida. Este excelente vehículo de BAJAJ cuenta con un motor 4 tiempos, monocilíndrico (DTS-i) y su cilindrada es de 124. 59 CC.",
         "label_promotion": "Precio de promoción",
         "price": "Q 12,699.00",
@@ -253,7 +253,7 @@
     },
     {
         "brand": "Bajaj",
-        "model": "DOMINAR-400",
+        "model": "DOMINAR 400",
         "description": "La Dominar 400 fue nacida para correr y creada para viajar. Su Sistema de frenos antibloqueo ABS, Sistema Fuel Injection, motor con tecnología DTS-i y suspensión monoshock nitrox tablero doble LCD, doble escape, faro de luz led y triangulación ergonómica permite recorrer montañas, caminos rurales y desiertos convirtiéndola en la mejor Sport Tourer de Guatemala.",
         "label_promotion": "Precio de promoción",
         "price": "Q 33,999.00",
@@ -277,7 +277,7 @@
     },
     {
         "brand": "Bajaj",
-        "model": "PULSAR-NS-125",
+        "model": "PULSAR NS125",
         "description": "Si alguna vez quisiste adentrarte en el mundo de las motocicletas deportivas, no hay mejor motocicleta que la Pulsar NS 125 para ayudarte a hacerlo. Cuenta con un sistema de frenos combinado CBS (Sistema de frenado combinado) que te permite tener mayor control y estabilidad al frenar. Sistema de escape ExhausTec que mejora la combustión y la potencia, mientras reduce las emisiones de contaminación.",
         "label_promotion": "Precio de promoción",
         "price": "Q 13,499.00",
@@ -306,7 +306,7 @@
     },
     {
         "brand": "Bajaj",
-        "model": "PULSAR-150-NEON",
+        "model": "PULSAR 150 NEÓN",
         "description": "La nueva Pulsar 150 Neón cuenta con un carácter y diseño deportivo, combinando Potencia, Tecnología y Versatilidad, hacen de esta moto una digna integrante de la familia PULSAR, capaz de satisfacer a aquellos usuarios que desean incluir más aventura a su vida diaria.",
         "label_promotion": "Precio de promoción",
         "price": "Q 17,139.00",
@@ -335,7 +335,7 @@
 
     {
         "brand": "Bajaj",
-        "model": "PULSAR-NS-200",
+        "model": "PULSAR NS200",
         "description": "Adéntrate en una experiencia de manejo extraordinaria al disfrutar del avanzado sistema de SUSPENSIÓN DELANTERA INVERTIDA que incorpora nuestro más reciente modelo. Esta característica asegura un MANEJO INIGUALABLE al ofrecer una estabilidad incomparable, reduciendo eficazmente el rebote y proporcionando una sensación de ligereza y facilidad de maniobra en tu motocicleta.",
         "label_promotion": "Precio de promoción",
         "price": "Q 18,700.00",
@@ -363,7 +363,7 @@
     },
     {
         "brand": "Bajaj",
-        "model": "PULSAR-NS-400Z",
+        "model": "PULSAR NS400Z",
         "description": "Diseñada para la adrenalina y equipada con un potente motor de 373 cc. Esta moto combina un poder inigualable con un estilo agresivo, estableciendo nuevos estándares en rendimiento y diseño.",
         "label_promotion": "Precio de promoción",
         "price": "Q 20,000.00",
