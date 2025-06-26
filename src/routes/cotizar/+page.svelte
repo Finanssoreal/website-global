@@ -112,7 +112,7 @@ async function handleSubmit(event){
       <div class="w-full max-w-4xl px-6 py-12">
         <h1 class="text-2xl font-bold text-center mb-8">¡Déjanos tus datos!</h1>
 
-        <form class="grid grid-cols-1 md:grid-cols-2 gap-6" on:submit={handleSubmit}>
+        <form class="grid grid-cols-1 sm:grid-cols-2 gap-6" on:submit={handleSubmit}>
           <!-- Nombre -->
           <div>
             <label class="block mb-2 text-sm font-medium">
@@ -246,14 +246,15 @@ async function handleSubmit(event){
           </div>
 
 
-          <div class="col-span-2 flex justify-center">
+          <div class="col-span-1 sm:col-span-2 flex justify-center">
             <div
                 class="g-recaptcha"
                 data-sitekey={PUBLIC_RECAPTCHA_SITE_KEY}>
             </div>
         </div>
+
           <!-- Botón de envío (colspan 2) -->
-          <div class="md:col-span-2 flex justify-center mt-8">
+          <div class="sm:col-span-2 flex justify-center mt-8">
             <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-16 rounded">
               Enviar
             </button>
