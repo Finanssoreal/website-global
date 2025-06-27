@@ -148,14 +148,14 @@ async function handleSubmit(event){
             <label class="block mb-2 text-sm font-medium">
               Código Único de Identificación (CUI) <span class="text-red-500">*</span>
             </label>
-            <input type="text" name="cui" required minlength="13" maxlength="13" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
+            <input type="text" name="cui" inputmode="numeric" required minlength="13" maxlength="13" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
           </div>
 
           <div>
             <label class="block mb-2 text-sm font-medium">
               Nro. Identificación Tributaria (NIT)
             </label>
-            <input type="text" name="nit" minlength="9" maxlength="9" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
+            <input type="text" name="nit" inputmode="numeric" minlength="9" maxlength="9" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
           </div>
 
           <!-- Método de pago y medio de contacto -->
