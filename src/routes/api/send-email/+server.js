@@ -18,21 +18,18 @@ export async function POST({ request, getClientAddress }) {
         )
     }
 
-    const { name, surname, email, phone, message } =
-        await request.json()
-
-
+    const { name, surname, email, phone, message } = await request.json()
 
     if (!name || !email || !message) {
         return json({ error: "Campos requeridos faltantes" }, { status: 400 })
     }
 
     const transporter = nodemailer.createTransport({
-                service: "gmail",
-                auth: {
-                    user: GMAIL_USER,
-                    pass: GMAIL_APP_PASSWORD,
-                },
+        service: "gmail",
+        auth: {
+            user: GMAIL_USER,
+            pass: GMAIL_APP_PASSWORD,
+        },
     })
 
     const info = await transporter.sendMail({
@@ -48,14 +45,14 @@ export async function POST({ request, getClientAddress }) {
             Mensaje:
             ${message}
             `.trim(),
-                    html: `
+        html: `
                 <p><strong>Nombre:</strong> ${name}</p>
                 <p><strong>Apellido:</strong> ${surname}</p>
                 <p><strong>Correo:</strong> ${email}</p>
                 <p><strong>Teléfono:</strong> ${phone}</p>
                 <p><strong>Mensaje:</strong><br>${message}</p>
             `,
-                })
+    })
     // api
     return json({ success: true })
 }

@@ -1,24 +1,22 @@
 <script>
-    import { page } from '$app/stores';
-    import ColorVariant from '$lib/components/ColorVariant.svelte'
+    import { page } from "$app/stores"
+    import ColorVariant from "$lib/components/ColorVariant.svelte"
     import ProductZoom from "$lib/components/ZoomCard.svelte"
     import specs from "$lib/data/especificacionesmoto.json"
 
-    $: model = $page.params.model;
+    $: model = $page.params.model
 
+    $: moto = specs.find((m) => m.model.toLowerCase() === model.toLowerCase())
 
-  $: moto = specs.find(m => m.model.toLowerCase() === model.toLowerCase());
-
-  $: motor = moto?.motor;
-  $: potencia = moto?.power ?? "N/A";
-  $: pistones = moto?.piston ?? "N/A";
-  $: combustible = moto?.fuel ?? "N/A";
-
+    $: motor = moto?.motor
+    $: potencia = moto?.power ?? "N/A"
+    $: pistones = moto?.piston ?? "N/A"
+    $: combustible = moto?.fuel ?? "N/A"
 
     $: especificaciones = [
         {
             titulo: "MOTOR",
-            valor:motor,
+            valor: motor,
             imagen: "/images/Especificaciones/motor.png",
             alt: "Motor",
         },
@@ -42,20 +40,17 @@
         },
     ]
 
+    $: motor_espec = moto?.motor2 ?? "N/A"
+    $: cilindraje = moto?.cilindraje ?? "N/A"
+    $: potencia_motor = moto?.potencia ?? "N/A"
 
-    $: motor_espec= moto?.motor2 ?? "N/A";
-    $: cilindraje= moto?.cilindraje ?? "N/A";
-    $: potencia_motor= moto?.potencia ?? "N/A";
+    $: torque = moto?.torque ?? "N/A"
+    $: embrague = moto?.embrague ?? "N/A"
+    $: alimentacion = moto?.alimentacion ?? "N/A"
 
-    $: torque= moto?.torque ?? "N/A";
-    $: embrague= moto?.embrague ?? "N/A";
-    $: alimentacion= moto?.alimentacion ?? "N/A";
-
-    $: caja= moto?.caja ?? "N/A";
-    $: diametro_carrera= moto?.diametro ?? "N/A";
-    $: arranque= moto?.arranque ?? "N/A";
-
-
+    $: caja = moto?.caja ?? "N/A"
+    $: diametro_carrera = moto?.diametro ?? "N/A"
+    $: arranque = moto?.arranque ?? "N/A"
 
     $: especificacionesMotor = [
         {
@@ -117,17 +112,17 @@
 
 <section>
     <ProductZoom
-        titulo={moto?.brand}{" "+moto?.model}
+        titulo="{moto?.brand}{' ' + moto?.model}"
         descripcion={moto?.description}
         subtitulo={moto?.label_promotion}
         precio={moto?.price}
         parrafoInferior={moto?.description2}
         imagenSrc={moto?.imageSrc}
         imagenAlt={moto?.alt}
-        colorVariants= {moto?.colorVariants}
+        colorVariants={moto?.colorVariants}
         botones={[
             { texto: "Quiero cotizar", tipo: "btn-success" },
-           // { texto: "Simular Crédito", tipo: "btn-info" },
+            // { texto: "Simular Crédito", tipo: "btn-info" },
         ]} />
 </section>
 
@@ -143,7 +138,10 @@
                 <h3 class="font-bold select-none">{titulo}</h3>
                 <p class="select-none">{valor}</p>
                 <div class="relative items-center justify-center flex mt-4 p-3">
-                    <img src={imagen} {alt} class="absolute h-10 w-auto select-none" />
+                    <img
+                        src={imagen}
+                        {alt}
+                        class="absolute h-10 w-auto select-none" />
                 </div>
             </div>
         {/each}
@@ -157,24 +155,27 @@
             <h2 class="text-3xl font-bold text-gray-900 select-none">
                 ESPECIFICACIONES DEL MOTOR
             </h2>
-            <div class="w-auto md:w-100 h-1  mx-auto mt-2" style="background-color: #1b3984;"></div>
+            <div
+                class="w-auto md:w-100 h-1 mx-auto mt-2"
+                style="background-color: #1b3984;">
+            </div>
         </div>
 
         <!-- Grid de especificaciones -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {#each especificacionesMotor as item}
-            {#if item.valor !== ""}
-                <div
-                    class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-xl transition-shadow duration-300 select-none">
-                    <img
-                        src={item.imagen}
-                        alt={item.alt}
-                        class="w-18 h-18 mx-auto mb-4" />
-                    <h3 class="text-lg font-semibold text-gray-800">
-                        {item.titulo}
-                    </h3>
-                    <p class="text-gray-600">{item.valor}</p>
-                </div>
+                {#if item.valor !== ""}
+                    <div
+                        class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-xl transition-shadow duration-300 select-none">
+                        <img
+                            src={item.imagen}
+                            alt={item.alt}
+                            class="w-18 h-18 mx-auto mb-4" />
+                        <h3 class="text-lg font-semibold text-gray-800">
+                            {item.titulo}
+                        </h3>
+                        <p class="text-gray-600">{item.valor}</p>
+                    </div>
                 {/if}
             {/each}
         </div>

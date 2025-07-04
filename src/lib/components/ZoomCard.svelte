@@ -1,5 +1,5 @@
 <script>
-    import Colorvariant from "./ColorVariant.svelte";
+    import Colorvariant from "./ColorVariant.svelte"
     export let titulo = ""
     export let descripcion = ""
     export let subtitulo = ""
@@ -8,11 +8,11 @@
     export let botones = []
     export let imagenSrc = ""
     export let imagenAlt = ""
-    export let colorVariants =[]
+    export let colorVariants = []
 
     let container
 
-    let selectedImage = imagenSrc;
+    let selectedImage = imagenSrc
 
     function handleMouseMove(event) {
         const img = container.querySelector("img")
@@ -28,8 +28,8 @@
     }
 
     function updateImage(event) {
-		selectedImage = event.detail.imageSrc;
-	}
+        selectedImage = event.detail.imageSrc
+    }
 </script>
 
 <div class="w-full h-full">
@@ -41,13 +41,17 @@
                 {descripcion}
             </p>
 
-            <strong class="text-left select-none text-xl md:text-2x">{subtitulo}</strong>
-            <p class="text-left select-none text-base md:text-xl font-black mt-2">
+            <strong class="text-left select-none text-xl md:text-2x">
+                {subtitulo}
+            </strong>
+            <p
+                class="text-left select-none text-base md:text-xl font-black mt-2">
                 {precio}
             </p>
 
             {#each botones as { texto, tipo }}
-                <a href="/cotizar"
+                <a
+                    href="/cotizar"
                     class="btn {tipo} text-white mt-2 w-35 md:w-40 ml-2 text-xs md:text-sm">
                     {texto}
                 </a>
@@ -57,18 +61,16 @@
                 {parrafoInferior}
             </p>
 
+            <p class="text-xl select-none mt-5">Colores Disponibles</p>
 
-                <p class="text-xl select-none mt-5">Colores Disponibles</p>
-
-            <div class=" w-full grid grid-cols-2 pr-20 sm:grid-cols-4 md:grid-cols-5 md:pr-10 lg:grid-cols-3 lg:pr-28 xl:grid-cols-4 xl:pr-20 gap-2">
-
+            <div
+                class=" w-full grid grid-cols-2 pr-20 sm:grid-cols-4 md:grid-cols-5 md:pr-10 lg:grid-cols-3 lg:pr-28 xl:grid-cols-4 xl:pr-20 gap-2">
                 {#each colorVariants as colorVariant}
-                <Colorvariant imageSrc={colorVariant} on:select={updateImage} />
+                    <Colorvariant
+                        imageSrc={colorVariant}
+                        on:select={updateImage} />
                 {/each}
-
-
             </div>
-
         </div>
 
         <div

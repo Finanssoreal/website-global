@@ -7,7 +7,6 @@
 
         const token = grecaptcha.getResponse()
 
-
         if (!token) {
             alert("Por favor completa el reCAPTCHA")
             return
@@ -20,24 +19,17 @@
         const phone = formData.get("phone")?.trim()
         const message = formData.get("message")?.trim()
 
-
-
         // Validación básica
-        if (
-            !name ||
-            !surname ||
-            !email ||
-            !phone ||
-            !message
-        ) {
+        if (!name || !surname || !email || !phone || !message) {
             alert("Completa todos los campos")
             return
         }
 
-
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
         if (!emailRegex.test(email)) {
-            alert("Por favor ingrese una dirección de correo electrónico válida")
+            alert(
+                "Por favor ingrese una dirección de correo electrónico válida",
+            )
             return
         }
 
@@ -47,10 +39,6 @@
             return
         }
 
-
-
-
-
         const res = await fetch("/api/verify-recaptcha", {
             method: "POST",
             body: JSON.stringify({ token }),
@@ -58,7 +46,6 @@
         })
 
         const data = await res.json()
-
 
         if (!data.success) {
             alert("Verificación reCAPTCHA fallida")
@@ -75,10 +62,9 @@
                 surname,
                 email,
                 phone,
-                message
+                message,
             }),
         })
-
 
         const emailData = await emailResponse.json()
 

@@ -1,28 +1,33 @@
 <script>
     import ProductCard from "$lib/components/Card.svelte"
     import products from "$lib/data/destacadas.json"
-
 </script>
 
 <!--bg-contain bg-cover-->
 
 <section>
-    <div class="w-full h-75 sm:h-100 md:h-125 bg-cover bg-center grid xl:grid-cols-2 xl:pl-6 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2  place-items-center  "
-    style="background-image: url('images/Inicio/FONDO-INICIO-BANNER.png');" >
-
+    <div
+        class="w-full h-75 sm:h-100 md:h-125 bg-cover bg-center grid xl:grid-cols-2 xl:pl-6 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 place-items-center"
+        style="background-image: url('images/Inicio/FONDO-INICIO-BANNER.png');">
         <!--Contenedor moto  bg-amber-500 -->
-        <div class=" xl:h-90 xl:w-160 xl:mt-20 xl:order-1   lg:h-80 lg:w-140 lg:mt-25 lg:order-1    md:h-57 md:w-100 md:mt-20 md:order-1    sm:h-46 sm:w-80 sm:mt-15 sm:order-1   h-40 w-70 mb-12   order-2">
-            <img src="images/Inicio/Moto-Portada.png" alt="Motocicleta " class="select-none">
+        <div
+            class=" xl:h-90 xl:w-160 xl:mt-20 xl:order-1 lg:h-80 lg:w-140 lg:mt-25 lg:order-1 md:h-57 md:w-100 md:mt-20 md:order-1 sm:h-46 sm:w-80 sm:mt-15 sm:order-1 h-40 w-70 mb-12 order-2">
+            <img
+                src="images/Inicio/Moto-Portada.png"
+                alt="Motocicleta "
+                class="select-none" />
         </div>
 
-         <!--Contenedor mensaje  bg-blue-700-->
-         <div class=" xl:h-20 xl:w-130 xl:mb-20 xl:ml-10 xl:order-2   lg:h-20 lg:w-105 lg:mb-12 lg:ml-10 lg:order-2   md:h-17 md:w-80 md:mb-10 md:ml-6 md:order-2   sm:h-17 sm:w-65 sm:mb-10 sm:ml-4 sm:order-2   h-17 w-65 mt-10 ml-0 order-1 ">
-            <img src="images/Inicio/Texto.png" alt="Domina cada ruta" class="select-none">
-         </div>
-
+        <!--Contenedor mensaje  bg-blue-700-->
+        <div
+            class=" xl:h-20 xl:w-130 xl:mb-20 xl:ml-10 xl:order-2 lg:h-20 lg:w-105 lg:mb-12 lg:ml-10 lg:order-2 md:h-17 md:w-80 md:mb-10 md:ml-6 md:order-2 sm:h-17 sm:w-65 sm:mb-10 sm:ml-4 sm:order-2 h-17 w-65 mt-10 ml-0 order-1">
+            <img
+                src="images/Inicio/Texto.png"
+                alt="Domina cada ruta"
+                class="select-none" />
+        </div>
     </div>
 </section>
-
 
 <section>
     <div
@@ -102,7 +107,8 @@ h-40 w-40 sm:h-60 sm:w-60 md:h-80 md:w-80 lg:h-100 lg:w-100 xl:h-120 xl:w-120-->
     <div class="flex flex-row w-full justify-center mt-15 mb-5">
         <a
             href="/catalog"
-            class="text-white text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl border p-1.5 md:p-3 rounded-4xl p-2 select-none" style="background-color:#fe0606;">
+            class="text-white text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl border p-1.5 md:p-3 rounded-4xl p-2 select-none"
+            style="background-color:#fe0606;">
             Ver Catálogo
         </a>
     </div>

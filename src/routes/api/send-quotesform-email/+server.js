@@ -18,17 +18,28 @@ export async function POST({ request, getClientAddress }) {
         )
     }
 
-    const { name, lastname, phone, email, cui, nit, payment_method,contact_type,
-        contact_hours,department,municipality,motorcycle_model } = await request.json()
+    const {
+        name,
+        lastname,
+        phone,
+        email,
+        cui,
+        nit,
+        payment_method,
+        contact_type,
+        contact_hours,
+        department,
+        municipality,
+        motorcycle_model,
+    } = await request.json()
 
-
-        const transporter = nodemailer.createTransport({
-            service: "gmail",
-            auth: {
-                user: GMAIL_USER,
-                pass: GMAIL_APP_PASSWORD,
-            },
-        })
+    const transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+            user: GMAIL_USER,
+            pass: GMAIL_APP_PASSWORD,
+        },
+    })
 
     const info = await transporter.sendMail({
         from: `"Formulario de cotizaciones" <${GMAIL_USER}>`,

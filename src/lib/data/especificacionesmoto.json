@@ -399,9 +399,7 @@
         "description2": "",
         "imageSrc": "/images/Bajaj/AVENGER-160-STREET.png",
         "alt": "Motocicleta Bajaj AVENGER 160 STREET",
-        "colorVariants": [
-
-        ],
+        "colorVariants": [],
         "motor": "4 tiempos, DTSi",
         "power": "15 Hp @ 8500 rpm",
         "piston": "160 CC",
