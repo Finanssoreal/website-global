@@ -19,15 +19,15 @@ body {
     color-scheme: light;
     default: true;
 
-    --color-primary: #000d2f;
+    --color-primary: #e4e4e4;
     --color-primary-content: #f1f5f9;
-    --color-neutral: #06b6d4;
-    --color-info: #0a1228;
+    --color-neutral: #023a5d;
+    --color-info: #010e00;
     --color-info-content: #0a1228;
 
     --color-secondary: #86b916;
     --color-secondary-content: #0284c7;
-    --color-success: #0e7490;
+    --color-success: #fe0606;
     --color-accent: #ffffff;
     --color-accent-content: #0284c7;
 }
@@ -233,4 +233,24 @@ body {
 /* animacion para el carrosel */
 .animate-slide {
     animation: slide 7s linear infinite;
+}
+
+/* animacion para las imagenes de las motos  */
+.hover-zoom {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-zoom img {
+    transition: transform 0.4s ease;
+    will-change: transform;
+    transform-origin: center center;
+}
+
+.hover-zoom:hover img {
+    transform: scale(3); /* Aumenta este número si quieres más zoom */
+}
+
+.hover-zoom:hover {
+    cursor: zoom-in;
 }
