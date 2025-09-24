@@ -1,24 +1,21 @@
-# Etapa 1: Construcción
-FROM node:20-alpine AS builder
-WORKDIR /app
+ARG NODE_VERSION=alpine
 
-COPY package.json pnpm-lock.yaml ./
+FROM node:${NODE_VERSION} AS builder
+
+WORKDIR /build
+
 COPY . .
 
-RUN npm install -g pnpm && pnpm install
-RUN pnpm run build
+RUN corepack enable && pnpm i && pnpm build
 
-# Etapa 2: Servir con http-server
-FROM node:20-alpine AS runner
+FROM node:${NODE_VERSION}
+
 WORKDIR /app
+COPY --from=builder /build/pnpm-lock.yaml /app/
+COPY --from=builder /build/package.json /app/
+COPY --from=builder /build/node_modules /app/node_modules
+COPY --from=builder /build/build /app/build
 
-# Instalar pnpm en la etapa runner
-RUN npm install -g pnpm
+EXPOSE 3000
 
-# Solo copiar lo necesario
-COPY --from=builder /app/build ./build
-RUN pnpm add http-server
-
-EXPOSE 4173
-
-CMD ["pnpm", "exec", "http-server", "build", "-p", "4173", "-c-1"]
+CMD ["node", "/app/build/index.js"]
