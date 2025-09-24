@@ -1,11 +1,12 @@
 import nodemailer from "nodemailer"
-import {
-    GMAIL_USER,
-    GMAIL_APP_PASSWORD,
-    RECIPIENT_EMAIL,
-} from "$env/static/private"
+
 import { json } from "@sveltejs/kit"
 import { isRateLimited } from "$lib/rate-limiter"
+
+const GMAIL_USER = process.env.GMAIL_USER
+const GMAIL_APP_PASSWORD = process.env.GMAIL_APP_PASSWORD
+const RECIPIENT_EMAIL = process.env.RECIPIENT_EMAIL
+
 
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function POST({ request, getClientAddress }) {

@@ -1,6 +1,4 @@
 <script>
-    import { PUBLIC_RECAPTCHA_SITE_KEY } from "$env/static/public"
-
     async function handleSubmit(event) {
         event.preventDefault()
         const form = event.target
@@ -154,10 +152,7 @@
                         placeholder="Escribe el motivo de tu mensaje"
                         class="textarea textarea-bordered w-58 h-20 sm:w-100 sm:h-30 bg-transparent text-xs sm:text-base text-white border-white placeholder-white" />
                     <div class="col-span-2 flex justify-center">
-                        <div
-                            class="g-recaptcha"
-                            data-sitekey={PUBLIC_RECAPTCHA_SITE_KEY}>
-                        </div>
+                        <div class="g-recaptcha" data-sitekey={""}></div>
                     </div>
 
                     <div class="col-span-2 flex justify-center">

@@ -1,5 +1,4 @@
 <script>
-    import { PUBLIC_RECAPTCHA_SITE_KEY } from "$env/static/public"
     async function handleSubmit(event) {
         event.preventDefault()
         const form = event.target
@@ -319,10 +318,7 @@
                 </div>
 
                 <div class="col-span-1 sm:col-span-2 flex justify-center">
-                    <div
-                        class="g-recaptcha"
-                        data-sitekey={PUBLIC_RECAPTCHA_SITE_KEY}>
-                    </div>
+                    <div class="g-recaptcha" data-sitekey={""}></div>
                 </div>
 
                 <!-- Botón de envío (colspan 2) -->

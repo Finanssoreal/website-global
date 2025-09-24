@@ -1,5 +1,7 @@
 import { json } from "@sveltejs/kit"
-import { RECAPTCHA_SECRET_KEY } from "$env/static/private"
+
+
+const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY
 
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function POST({ request }) {
