@@ -7,7 +7,6 @@ const GMAIL_USER = process.env.GMAIL_USER
 const GMAIL_APP_PASSWORD = process.env.GMAIL_APP_PASSWORD
 const RECIPIENT_EMAIL = process.env.RECIPIENT_EMAIL
 
-
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function POST({ request, getClientAddress }) {
     const ip = getClientAddress()
