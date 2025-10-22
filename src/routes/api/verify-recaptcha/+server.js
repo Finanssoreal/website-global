@@ -1,6 +1,5 @@
 import { json } from "@sveltejs/kit"
 
-
 const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY
 
 /** @type {import('@sveltejs/kit').RequestHandler} */
