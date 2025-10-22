@@ -38,7 +38,7 @@
                 <div class="flex flex-col text-center items-center">
                     <p
                         class="text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
-                        (502) 47078266
+                        (502) 30660865
                     </p>
                     <p
                         class="text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
